@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../../global.css">
+  <title>Refund</title>
+</head>
+<body>
+  <h3>Refund Item</h3>
+  
+  <div id="nomor-transaksi">
+    <label for="nomor-transaksi" id="label-nomor-transaksi">Nomor Transaksi</label>
+    <input type="text" name="nomor-transaksi" id="input-nomor-transaksi" />
+  </div>
+
+  <div>
+    <p>Transaksi IT-5253</p>
+    <p>2 Ultrapods TWS Android with Microphone 30000</p>
+    <p>1 Kipas Angin Portable Genggam 20000</p>
+    <p>3 Sketchbook A6 100 Halaman 5000</p>
+  </div>
+
+  <form>
+    <p>Item</p>
+    <select>
+      <option>Ultrapods TWS Android with Microphone</option>
+      <option>Kipas Angin Portable Genggam</option>
+      <option>Sketchbook A6 100 Halaman</option>
+    </select>
+
+    <p>Ultrapods TWS Android with Microphone</p>
+
+    <p>Alasan</p>
+    <select>
+      <option>Rusak</option>
+      <option>Expired</option>
+      <option>Salah Beli</option>
+      <option>Tidak Sesuai</option>
+    </select>
+
+    <p>Catatan</p>
+    <textarea></textarea>
+
+    <p>Refund ke:</p>
+    <select>
+      <option>ATM</option>
+      <option>Dana</option>
+    </select>
+  </form>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/4.0.0/jquery.min.js" integrity="sha512-8LENNbXmzI/Gbj+OwXmqR6V4QaUAw0/porPzy1+dQoJqC0JPHedWoe0DDOTL2uHA5XXJyIsPtiMHH86pVlay6A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="app.js"></script> 
+</body>
+</html>

@@ -1,0 +1,29 @@
+#topup-ewallet-form{
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  gap: 1em;
+}
+
+.price-item{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price-item p:first-of-type{
+  color: var(--text-secondary);
+  font-size: .85em;
+}
+
+.price-item > p ~ p{
+  font-weight: 700;
+  /* font-size: .em; */
+}
+
+.bold-line{
+  height: .5px;
+  width: 100%;
+  background-color: var(--text-secondary);
+  margin: .5em 0;
+}
