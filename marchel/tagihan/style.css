@@ -1,0 +1,41 @@
+body{
+  padding: 1em;
+}
+
+#tagihan-form{
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding: 1em;
+  margin: 1em 0;
+  border-radius: 1em;
+  background-color: var(--primary);
+}
+
+.line{
+  height: 1px;
+  background-color: var(--border);
+}
+
+#tagihan-result{
+  display: flex;
+  flex-direction: column;
+  gap: .4em;
+  padding: 1em;
+  border-radius: 1em;
+  background-color: var(--primary);
+}
+
+#tagihan-result > div{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#tagihan-result > div > p:first-of-type{
+  font-size: .95em;
+}
+
+#tagihan-result > div > p ~ p{
+  font-weight: 600;
+}

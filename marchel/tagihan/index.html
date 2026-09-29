@@ -8,28 +8,74 @@
   <title>Tagihan</title>
 </head>
 <body>
+  <div id="bg-elem"></div>
+
   <h3>Tagihan</h3>
 
-  <select>
-    <option>PLN</option>
-    <option>PDAM</option>
-    <option>Internet</option>
-    <option>BPJS</option>
-    <option>Telkom</option>
-  </select>
+  <form id="tagihan-form">
+    <div>
+      <p>Provider</p>
+      <select>
+        <option>PLN</option>
+        <option>PDAM</option>
+        <option>Internet</option>
+        <option>BPJS</option>
+        <option>Telkom</option>
+      </select>
+    </div>
+  
+    <div>
+      <p>ID Pelanggan</p>
+      <input type="text" />
+    </div>
 
-  <p>ID Pelanggan</p>
-  <input type="text" />
-
-  <button>Cek Tagihan</button>
+    <button>Cek Tagihan</button>
+  </form>
 
 
-  <p>Nama: Kulius Fulouis</p>
-  <p>Alamat: Jl. Bumi 25</p>
-  <p>Periode: hah</p>
-  <p>Jumlah Tagihan: 50.000.000</p>
-  <p>Admin: 2.000.000</p>
-  <p>Total: 52.000.000</p>
+  <div id="tagihan-result">
+    <div>
+      <p>Provider</p>
+      <p>PLN</p>
+    </div>
+
+    <div>
+      <p>ID</p>
+      <p>54318796487</p>
+    </div>
+
+    <div>
+      <p>Nama</p>
+      <p>Kulius Fulouis</p>
+    </div>
+    
+    <div>
+      <p>Alamat</p>
+      <p>Jl. Bumi 25</p>
+    </div>
+    
+    <div>
+      <p>Periode</p>
+      <p>2027</p>
+    </div>
+
+    <div>
+      <p>Tagihan</p>
+      <p>50.000.000</p>
+    </div>
+
+    <div>
+      <p>Admin</p>
+      <p>2.000.000</p>
+    </div>
+
+    <div class="line"></div>
+
+    <div>
+      <p>Total</p>
+      <p>52.000.000</p>
+    </div>
+  </div>
 
   <button>Bayar</button>
 

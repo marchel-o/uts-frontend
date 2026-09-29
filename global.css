@@ -8,17 +8,27 @@
 }
 
 :root{
-  --primary: #2563EB;
+  --primary: #f5f8fc;
   --primary-dark:	#1D4ED8;
-  --primary-light: #DBEAFE;
+  --primary-light: #f5f8fc;
   --accent:	#F59E0B;
   --success: #16A34A;
   --warning: #F97316;
   --danger: #DC2626;
   --info: #0EA5E9;
-  --bg: #F8FAFC;
+  --bg: #dadee1;
   --surface: #FFFFFF;
-  --border: #E2E8F0;
+  --border: #c6cbd0;
   --text-primary: #0F172A;
   --text-secondary: #475569;
+}
+
+#bg-elem{
+  position: fixed;
+  background-color: var(--bg);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -99;
 }
