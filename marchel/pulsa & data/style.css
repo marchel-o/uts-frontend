@@ -1,0 +1,55 @@
+#topup-pulsa-form{
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  gap: 1em;
+}
+
+#nomor-hp{
+  position: relative;
+  margin-top: .5em;
+}
+
+#label-nomor-hp{
+  position: absolute;
+  left: 1.4rem;
+  bottom: 2.2rem;
+  background-color: var(--bg);
+  padding: 0 .2em;
+  font-size: .7em;
+}
+
+#input-nomor-hp{
+  width: 100%;
+  border: 2px solid var(--border);
+  border-radius: 1rem;
+  padding: .8em 1.5em;
+  outline: none;
+}
+
+#list-pulsa{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1em;
+}
+
+.pulsa-item{
+  display: flex;
+  flex-direction: column;
+  gap: .5em;
+  padding: .6em .8em;
+  border: 2px solid var(--primary-dark);
+  border-radius: 1rem;
+}
+
+.pulsa-item p{
+  font-weight: 700;
+}
+
+.pulsa-item button{
+  border-radius: 1.2em;
+  padding: .3em .8em;
+  color: var(--surface);
+  border: none;
+  background-color: var(--primary);
+}

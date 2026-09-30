@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Manrope", Arial;
+}
+
+:root{
+  --primary: #f5f8fc;
+  --primary-dark:	#1D4ED8;
+  --primary-light: #f5f8fc;
+  --accent:	#F59E0B;
+  --success: #16A34A;
+  --warning: #F97316;
+  --danger: #DC2626;
+  --info: #0EA5E9;
+  --bg: #dadee1;
+  --surface: #FFFFFF;
+  --border: #c6cbd0;
+  --text-primary: #0F172A;
+  --text-secondary: #475569;
+}
+
+#bg-elem{
+  position: fixed;
+  background-color: var(--bg);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -99;
+}
