@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../../global.css">
+  <title>Produk</title>
+</head>
+<body>
+  <div id="bg-elem"></div>
+
+  <h3>Tambah Produk</h3>
+
+  <form id="tambah-produk-form">
+    <div>
+      <label for="produk-nama">Nama Produk</label>
+      <input id="produk-nama" name="produk-nama" type="text" />
+    </div>
+    
+    <div>
+      <label for="produk-deskripsi">Deskripsi</label>
+      <textarea id="produk-deskripsi" name="produk-deskripsi"></textarea>
+    </div>
+
+    <div>
+      <label for="produk-kategori">Kategori</label>
+      <select id="produk-kategori" name="produk-kategori">
+        <option value="" disabled selected hidden>Pilih Kategori</option>
+        <option value="Makanan">Makanan</option>
+        <option value="Minuman">Minuman</option>
+        <option value="Lainnya">Lainnya</option>
+      </select>
+    </div>
+
+    <div>
+      <label for="produk-harga">Harga</label>
+      <input id="produk-harga" name="produk-harga" type="number" />
+    </div>
+    
+    <div>
+      <label for="produk-stock">Stock</label>
+      <input id="produk-stock" name="produk-stock" type="number" />
+    </div>
+
+    <div>
+      <label for="produk-gambar">Gambar</label>
+      <input type="file" id="produk-gambar" name="produk-gambar" />
+    </div>
+
+    <button>Tambah Produk</button>
+  </form>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/4.0.0/jquery.min.js" integrity="sha512-8LENNbXmzI/Gbj+OwXmqR6V4QaUAw0/porPzy1+dQoJqC0JPHedWoe0DDOTL2uHA5XXJyIsPtiMHH86pVlay6A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="app.js"></script>
+</body>
+</html>
