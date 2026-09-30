@@ -21,6 +21,7 @@ body{
   gap: 1em;
   padding: 1em;
   border: 2px solid var(--border);
+  background-color: var(--primary);
   border-radius: 1em;
   font-size: .8em;
 }

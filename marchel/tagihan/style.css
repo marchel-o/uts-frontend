@@ -38,4 +38,8 @@ body{
 
 #tagihan-result > div > p ~ p{
   font-weight: 600;
+  max-width: 150px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: none;
 }

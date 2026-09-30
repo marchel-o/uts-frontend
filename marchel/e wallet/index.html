@@ -8,51 +8,72 @@
   <title>E-Wallet</title>
 </head>
 <body>
-  <form id="topup-ewallet-form">
-    <h3>Top Up E-Wallet</h3>
-  
-    <p>Provider</p>
-    <select>
-      <option>GoPay</option>
-      <option>OVO</option>
-      <option>Dana</option>
-      <option>ShopeePay</option>
-      <option>LinkAja</option>
-    </select>
-  
-    <p>Nomor Akun</p>
-    <input type="text" />
-  
-    <p>Nominal</p>
-    <input type="number" />
-  
-    <!-- <p>Harga: 50.000</p>
-    <p>Admin: 2.500</p>
-    <p>Total: 52.500</p> -->
-  
-    <div>
-      
+  <div id="bg-elem"></div>
+  <div id="overlay"></div>
 
-      <div class="price-item">
-        <p>Harga:</p>
-        <p>50.000</p>
-      </div>
+  <h3>Top Up E-Wallet</h3>
   
-      <div class="price-item">
-        <p>Admin:</p>
-        <p>2.500</p>
-      </div>
-  
-      <div class="bold-line"></div>
-      
-      <div class="price-item">
-        <p>Total:</p>
-        <p>52.500</p>
-      </div>
+  <form id="topup-ewallet-form">
+    <div>
+      <label for="ewallet-provider">Provider</label>
+      <select required name="ewallet-provider" id="ewallet-provider">
+        <option value="" disabled selected hidden>Pilih Provider</option>
+        <option>GoPay</option>
+        <option>OVO</option>
+        <option>Dana</option>
+        <option>ShopeePay</option>
+        <option>LinkAja</option>
+      </select>
     </div>
   
-    <button>Bayar</button>
+    <div>
+      <label for="ewallet-nomor">Nomor Akun</label>
+      <input type="text" name="ewallet-nomor" id="ewallet-nomor" maxlength="13" required />
+    </div>
+  
+    <div>
+      <label for="ewallet-nominal">Nominal</label>
+      <input type="number" name="ewallet-nominal" id="ewallet-nominal" required />
+    </div>
+
+    <button type="submit">Top Up</button>
   </form>
+
+  <div id="ewallet-result">
+    <h4>Konfirmasi</h4>
+
+    <div class="price-item">
+      <p>E-Wallet:</p>
+      <p id="provider-val">GoPay</p>
+    </div>
+
+    <div class="price-item">
+      <p>No. HP:</p>
+      <p id="nomor-val">0814-8206-4125</p>
+    </div>
+
+    <div class="price-item">
+      <p>Harga:</p>
+      <p id="price-val">50.000</p>
+    </div>
+
+    <div class="price-item">
+      <p>Admin:</p>
+      <p>2.500</p>
+    </div>
+
+    <div class="bold-line"></div>
+    
+    <div class="price-item">
+      <p>Total:</p>
+      <p id="total-val">52.500</p>
+    </div>
+
+    <div>
+      <button id="cancel">Batal</button>
+      <button id="pay">Bayar</button>
+    </div>
+  </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/4.0.0/jquery.min.js" integrity="sha512-8LENNbXmzI/Gbj+OwXmqR6V4QaUAw0/porPzy1+dQoJqC0JPHedWoe0DDOTL2uHA5XXJyIsPtiMHH86pVlay6A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="app.js"></script>
