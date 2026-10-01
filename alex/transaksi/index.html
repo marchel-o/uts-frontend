@@ -7,6 +7,32 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header>
+        <strong>Kasir Minimart</strong>
+        <nav>
+            <a href="cari-barang.html">Cari barang</a>
+            <a href="pembayaran.html">Pembayaran</a>
+            <a href="void.html">Void</a>
+        </nav>
+    </header>
+    <main class="app" id="main">
+        <section class="noprint">            
+            <h1>Transaksi berhasil</h1>
+            <div class="change" style="margin-top:12px"><span id="lbl">Kembalian</span><b id="kembali"></b></div>
+            <div class="card">
+                <label for="tujuan" style="margin-top:0">Kirim struk digital</label>
+                <input id="tujuan" placeholder="Email atau nomor WhatsApp (08xxxxxxxxxx)" autocomplete="off">
+                <p id="msg" class="err" role="alert"></p>
+                <button id="kirim" class="btn block" style="margin-top:0">Kirim struk digital</button>
+            </div>
+            <div class="actions">
+                <button id="cetak" class="btn pri">Cetak struk</button>
+                <a class="btn" href="cari-barang.html">Transaksi baru</a>
+                <a id="void" class="btn" href="void.html">Void transaksi ini</a>
+            </div>
+        </section>
+        <aside class="struk" id="struk"></aside>
+    </main> 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="app.js"></script>
 </body>

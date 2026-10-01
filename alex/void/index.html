@@ -7,6 +7,34 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header class="top">
+        <strong>Kasir Minimart</strong>
+        <nav>
+            <a href="cari-barang.html">Cari barang</a>
+            <a href="pembayaran.html">Pembayaran</a>
+            <a class="on" href="void.html">Void</a>
+        </nav>
+    </header>
+    <main class="app">
+    <section>
+        <h1>Void transaksi</h1>
+        <p class="hint">Pembatalan pesanan wajib disetujui supervisor dengan PIN.</p>
+        <div class="card">
+        <label for="pilih" style="margin-top:0">Pesanan yang dibatalkan</label>
+        <select id="pilih"></select>
+        <label for="alasan">Alasan pembatalan</label>
+        <textarea id="alasan" rows="2" placeholder="Contoh: pelanggan batal beli, salah input barang"></textarea>
+        <label for="pin">PIN supervisor</label>
+        <input id="pin" type="password" inputmode="numeric" maxlength="6" placeholder="6 digit" autocomplete="off">
+        <p id="msg" class="err" role="alert"></p>
+        <button id="void" class="btn bad block" style="margin-top:0">Void transaksi</button>
+        </div>
+    </section>
+    <aside class="struk">
+        <h2>Detail pesanan</h2>
+        <div id="detail"></div>
+    </aside>
+    </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="app.js"></script>
 </body>
