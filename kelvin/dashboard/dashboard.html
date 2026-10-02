@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <aside>
+        <h1>Kasir</h1>
+        <nav>
+            <a href="dashboard.html" id="dashboard">Dashboard</a>
+            <a href="#" id="transaksi">Transaksi</a>
+            <a href="#" id="riwayatTransaksi">Riwayat Transaksi</a>
+            <a href="#" id="produk">Produk</a>
+            <a href="#" id="logout">Log Out</a>
+        </nav>
+    </aside>
+
+    <main>
+        <header>
+            <h2>Selamat Datang</h2>
+            <span id="tanggal">Tanggal</span>
+            <span id="statusShift">Shift Aktif</span>
+        </header>
+
+        <div id="ringkasan">
+            <section>
+                <h3>Total Penjualan</h3>
+                <span id="totalSale">Rp0</span>
+            </section>
+            <section>
+                <h3>Jumlah Transaksi</h3>
+                <span id="totalTransaksi">0</span>
+            </section>
+            <section>
+                <h3>Produk Terjual</h3>
+                <span id="produkTerjual">0</span>
+            </section>
+        </div>
+
+
+
+        <section>
+            <h3>Transaksi Terbaru</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>No. Transaksi</th>
+                        <th>Waktu</th>
+                        <th>Total</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>TRX001</td>
+                        <td>09:30</td>
+                        <td>Rp50.000</td>
+                        <td>Selesai</td>
+                    </tr>
+                    <tr>
+                        <td>TRX002</td>
+                        <td>10:15</td>
+                        <td>Rp75.000</td>
+                        <td>Selesai</td>
+                    </tr>
+                    <tr>
+                        <td>TRX003</td>
+                        <td>10:45</td>
+                        <td>Rp25.000</td>
+                        <td>Selesai</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+</main>
+<script src="dashboard.js"></script>
+</body>
+</html>
