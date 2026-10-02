@@ -12,7 +12,7 @@ loginForm.addEventListener("submit", function(e) {
     const message = document.getElementById("message")
    
     if(username === admin.username && pin === admin.pin) {
-        window.location.href="";
+        window.location.href="../open-shift/open-shift.html";
     }
     else {
         message.textContent = "Username atau password salah."

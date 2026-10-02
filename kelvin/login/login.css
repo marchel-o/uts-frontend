@@ -9,7 +9,8 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: linear-gradient(135deg, lavender 30%, rgb(241, 250, 225) 80%);
+    /* background: linear-gradient(0deg, #6e0b1c 1%, rgb(211, 205, 205) 50%); */
+    background: linear-gradient(90deg, #6e0b1c 10%, rgb(211, 205, 205) 10%);
 }
 
 .box {
@@ -51,7 +52,7 @@ body {
     padding: 10px;
     width: 100%;
     cursor: pointer;
-    background-color: rgb(235, 157, 255);
+    background-color: #6e0b1c;
     color: white;
     box-shadow: 0px 3px 10px black;
     transition: 0.3s;
