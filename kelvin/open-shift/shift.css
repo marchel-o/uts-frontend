@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #6e0b1c;
+}
+
+h1 {
+    font-size: 60px;
+    font-family: system-ui;
+    color: white;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-family: system-ui;
+    color: white;
+}
+
+strong {
+    color:white;
+}
+
+.numpad {
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+}
+
+.numpad input {
+    padding: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+    font-size: 20px;
+    transition: 0.2s;
+    min-height: 60px;
+}
+.numpad input:hover {
+    background-color: gray;
+}
+.numpad input:active {
+    transform: scale(0.9);
+}
+
+#amountDisp {
+    padding-right: 10%;
+    text-align: right;
+    font-size: 50px;
+    font-family: system-ui;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    border: 1px solid gray;
+    background-color: beige;
+}
+
+.leftPanel {
+    flex: 2;
+    display: flex;
+    gap: 30px;
+    padding: 30px;
+    flex-direction: column;
+}
+
+.rightPanel {
+    flex: 1;
+    padding: 30px;
+    width: 450px;
+
+
+}
+
+.container {
+    display: flex;
+    gap: 30px;
+    padding: 30px;
+    align-items: flex-start;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.shift-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.infoKasir,
+.infoTanggal {
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #f5f5f5;
+}
+
+
+#openShiftBtn {
+    width: 100%;
+    margin-top: 15px;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: beige;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#openShiftBtn:hover {
+    background-color: #7b5dbb;
+}
+
+#openShiftBtn:active {
+    transform: scale(0.98);
+}
+
+.infoKasir, .infoTanggal {
+    font-family: system-ui;
+    font-weight: 600;
+    transition: 0.2s;
+}
+.infoKasir:hover, .infoTanggal:hover {
+    transform: scale(1.05);
+}
