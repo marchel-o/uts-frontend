@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>Kas Keluar</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../../global.css" />
+  </head>
+  <body>
+    <div id="bg-elem"></div>
+    <div id="overlay"></div>
+    <div class="page">
+      <h3>Kas Keluar (Petty Cash)</h3>
+      <p class="desc">
+        Pencatatan pengambilan uang laci untuk operasional (misal: beli galon
+        toko, parkir).
+      </p>
+      <div class="card" style="margin-bottom: 16px">
+        <form id="cashout-form">
+          <div class="field">
+            <label>Nominal (Rp)</label><input type="number" id="fx0" required />
+          </div>
+          <div class="field">
+            <label>Keterangan</label
+            ><input
+              type="text"
+              id="fx1"
+              placeholder="misal: beli galon, parkir"
+              required
+            />
+          </div>
+          <button type="submit">Catat Kas Keluar</button>
+        </form>
+      </div>
+      <div class="card">
+        <div
+          style="
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+          "
+        >
+          <strong>Riwayat Kas Keluar Hari Ini</strong>
+          <span style="display: flex; align-items: center; gap: 12px">
+            <b id="cashout-total">Rp 0</b>
+            <button
+              type="button"
+              class="btn"
+              style="
+                background: none;
+                border: 1px solid var(--border);
+                color: var(--danger);
+                padding: 5px 10px;
+                font-size: 12.5px;
+              "
+              onclick="clearCashOut()"
+            >
+              Hapus Semua
+            </button>
+          </span>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Tanggal & Waktu</th>
+              <th>Nominal</th>
+              <th>Keterangan</th>
+            </tr>
+          </thead>
+          <tbody id="cashout-rows"></tbody>
+        </table>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

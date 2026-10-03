@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>Pendaftaran Member</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../../global.css" />
+  </head>
+  <body>
+    <div id="bg-elem"></div>
+    <div id="overlay"></div>
+    <div class="page">
+      <h3>Pendaftaran Member</h3>
+      <p class="desc">
+        Halaman registrasi pelanggan baru untuk program loyalitas/poin.
+      </p>
+      <div class="card">
+        <form id="member-form">
+          <div class="field">
+            <label>Nama Lengkap</label><input type="text" id="fx0" required />
+          </div>
+          <div class="field">
+            <label>No. HP</label><input type="tel" id="fx1" required />
+          </div>
+          <div class="field">
+            <label>Tanggal Lahir</label><input type="date" id="fx2" />
+          </div>
+          <button type="submit">Daftarkan Member</button>
+        </form>
+        <div class="result" id="member-reg-result" style="display: none"></div>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
