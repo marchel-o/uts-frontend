@@ -1,0 +1,166 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font: 15px/1.5 system-ui, "Segoe UI", Arial, sans-serif;
+}
+
+.app {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  min-height: 100vh;
+  background: linear-gradient(135deg, lavender 30%, rgb(241, 250, 225) 80%);
+}
+
+.nav {
+  background: rgba(35, 49, 48, 0.85);
+  color: #fff;
+  padding: 20px 12px;
+}
+
+.nav h1 {
+  font-size: 18px;
+  margin: 0 8px 18px;
+}
+
+.nav a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  padding: 11px 12px;
+  border-radius: 8px;
+}
+
+.nav a:hover {
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.nav a.active {
+  background: rgba(255, 255, 255, 0.22);
+  font-weight: 700;
+}
+
+.main {
+  padding: 28px;
+  max-width: 760px;
+}
+
+.main h2 {
+  margin: 0 0 4px;
+  font-size: 24px;
+}
+
+.sub {
+  color: #555;
+  margin: 0 0 20px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.35);
+  border-radius: 12px;
+  padding: 18px;
+  margin-bottom: 16px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+}
+
+label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 9px 10px;
+  border: none;
+  border-radius: 8px;
+  font: inherit;
+}
+
+.btn {
+  background: rgb(235, 157, 255);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 10px;
+  padding: 10px 16px;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.6);
+}
+
+.btn:hover {
+  transform: scale(0.95);
+}
+
+.btn-sm {
+  padding: 5px 10px;
+  font-size: 13px;
+  background: none;
+  color: #b3261e;
+  border: 1px solid #b3261e;
+  box-shadow: none;
+}
+
+.total {
+  font-size: 22px;
+  font-weight: 800;
+  margin: 14px 0;
+}
+
+.scroll {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 8px 6px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  white-space: nowrap;
+}
+
+th {
+  font-size: 13px;
+  color: #555;
+}
+
+.r {
+  text-align: right !important;
+}
+
+.msg {
+  padding: 10px 12px;
+  border-radius: 8px;
+  margin-top: 12px;
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.msg.ok {
+  color: green;
+}
+
+.msg.bad {
+  color: red;
+}

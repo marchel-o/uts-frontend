@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tarik Tunai (Drop Cash)</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="app">
+    <nav class="nav">
+      <h1>Kasir Shift</h1>
+
+      <a href="index.html" class="active">Tarik Tunai</a>
+      <a href="../Tutup Shift/index.html">Tutup Shift</a>
+      <a href="../Laporan Penjulan/index.html">Laporan Penjualan</a>
+      <a href="../Pengaturan Hardware/index.html">Pengaturan Hardware</a>
+    </nav>
+
+    <main class="main">
+      <h2>Tarik Tunai (Drop Cash)</h2>
+
+      <p class="sub">
+        Catat setoran uang pecahan besar ke brankas atau supervisor di tengah shift.
+      </p>
+
+      <div class="card">
+        <div class="grid">
+          <div>
+            <label for="amt">Jumlah setoran (Rp)</label>
+            <input id="amt" type="number" min="0" step="1000">
+          </div>
+
+          <div>
+            <label for="to">Diserahkan ke</label>
+            <select id="to">
+              <option>Brankas</option>
+              <option>Supervisor</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="note">Catatan</label>
+            <input id="note" placeholder="mis. laci penuh">
+          </div>
+        </div>
+
+        <p>
+          <button type="button" class="btn" id="saveBtn">
+            Simpan setoran
+          </button>
+        </p>
+
+        <div id="msg" class="msg" hidden></div>
+      </div>
+
+      <div class="card">
+        <div class="scroll">
+          <table>
+            <thead>
+              <tr>
+                <th>Jam</th>
+                <th>Tujuan</th>
+                <th>Catatan</th>
+                <th class="r">Jumlah</th>
+                <th class="r">Aksi</th>
+              </tr>
+            </thead>
+
+            <tbody id="rows"></tbody>
+          </table>
+        </div>
+
+        <div class="total">
+          Total setoran: <span id="totalAmt">Rp 0</span>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

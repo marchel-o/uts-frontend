@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tutup Shift (Close Register)</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="app">
+    <nav class="nav">
+      <h1>Kasir Shift</h1>
+
+      <a href="../Tarik Tunai/index.html">Tarik Tunai</a>
+      <a href="index.html" class="active">Tutup Shift</a>
+      <a href="../Laporan Penjulan/index.html">Laporan Penjualan</a>
+      <a href="../Pengaturan Hardware/index.html">Pengaturan Hardware</a>
+    </nav>
+
+    <main class="main">
+      <h2>Tutup Shift (Close Register)</h2>
+
+      <p class="sub">
+        Hitung uang fisik di laci. Total sistem disembunyikan sampai Anda mengirim (blind close).
+      </p>
+
+      <div class="card">
+        <div class="grid" id="denoms"></div>
+
+        <div class="total">
+          Total hitungan: <span id="countTotal">Rp 0</span>
+        </div>
+
+        <button type="button" class="btn" id="closeBtn">
+          Kirim &amp; tutup shift
+        </button>
+
+        <div id="closeMsg" class="msg" hidden></div>
+      </div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
