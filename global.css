@@ -8,19 +8,38 @@
 }
 
 :root{
-  --primary: #f5f8fc;
-  --primary-dark:	#1D4ED8;
-  --primary-light: #f5f8fc;
-  --accent:	#F59E0B;
-  --success: #16A34A;
-  --warning: #F97316;
+  --primary: #800000;
+  --primary-hover: #600000;
+  --accent: #D4AF37;
+  
+  --success: #15803D;
+  --warning: #EA580C;
   --danger: #DC2626;
-  --info: #0EA5E9;
-  --bg: #dadee1;
+  --info: #0369A1;
+
+
+  --bg: #F4F1EA;
   --surface: #FFFFFF;
-  --border: #c6cbd0;
-  --text-primary: #0F172A;
-  --text-secondary: #475569;
+  --surface-elevated: #FDFBF7;
+  --border: #E2DCD5;
+
+  --text-primary: #1F1111;
+  --text-secondary: #655656;
+  --text-light: #FFFFFF;
+}
+
+body{
+  max-width: 550px;
+  margin: auto;
+  color: var(--text-primary);
+  padding: 1em;
+}
+
+@media screen and (min-width: 780px) {
+    body{
+      max-width: 700px;
+      font-size: 20px;
+    }
 }
 
 #bg-elem{
@@ -31,4 +50,32 @@
   width: 100%;
   height: 100vh;
   z-index: -99;
+}
+
+#overlay{
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  opacity: .3;
+}
+
+#head-title{
+  display: flex;
+  align-items: center;
+  gap: .6em;
+}
+
+#head-title a{
+  font-size: 1.2em;
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: 150ms all;
+}
+
+#head-title a:hover{
+  opacity: .7;
 }

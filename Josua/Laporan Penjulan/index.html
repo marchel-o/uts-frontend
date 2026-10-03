@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Laporan Penjualan (End of Day)</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="app">
+    <nav class="nav">
+      <h1>Kasir Shift</h1>
+
+      <a href="../Tarik Tunai/index.html">Tarik Tunai</a>
+      <a href="../Tutup Shift/index.html">Tutup Shift</a>
+      <a href="index.html" class="active">Laporan Penjualan</a>
+      <a href="../Pengaturan Hardware/index.html">Pengaturan Hardware</a>
+    </nav>
+
+    <main class="main">
+      <h2>Laporan Penjualan (End of Day)</h2>
+
+      <p class="sub">
+        Rekap omzet, selisih kurang/lebih, dan metode pembayaran hari ini.
+      </p>
+
+      <div class="stats" id="stats"></div>
+
+      <div class="card">
+        <h3>Metode Pembayaran</h3>
+        <div id="pay"></div>
+      </div>
+
+      <div class="card">
+        <h3>Grafik Penjualan</h3>
+        <div id="chart"></div>
+      </div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
