@@ -19,18 +19,18 @@
   <form id="tambah-produk-form">
     <div>
       <label for="produk-nama">Nama Produk</label>
-      <input id="produk-nama" name="produk-nama" type="text" />
+      <input id="produk-nama" name="produk-nama" type="text" required />
     </div>
     
     <div>
       <label for="produk-deskripsi">Deskripsi</label>
-      <textarea id="produk-deskripsi" name="produk-deskripsi"></textarea>
+      <textarea id="produk-deskripsi" name="produk-deskripsi" required></textarea>
     </div>
 
     <div class="produk-items">
       <div>
         <label for="produk-kategori">Kategori</label>
-        <select id="produk-kategori" name="produk-kategori">
+        <select id="produk-kategori" name="produk-kategori" required>
           <option value="" disabled selected hidden>Pilih Kategori</option>
           <option value="Makanan">Makanan</option>
           <option value="Minuman">Minuman</option>
@@ -40,14 +40,14 @@
   
       <div>
         <label for="produk-harga">Harga</label>
-        <input id="produk-harga" name="produk-harga" type="number" />
+        <input id="produk-harga" name="produk-harga" type="number" required />
       </div>
     </div>
     
     <div class="produk-items">
       <div>
         <label for="produk-stock">Stock</label>
-        <input id="produk-stock" name="produk-stock" type="number" />
+        <input id="produk-stock" name="produk-stock" type="number" required />
       </div>
   
       <div>
@@ -56,8 +56,12 @@
       </div>
     </div>
 
-    <button>Tambah Produk</button>
+    <button type="submit">Tambah Produk</button>
   </form>
+
+  <div id="modal-popup">
+    <p>Produk berhasil ditambah!</p>
+  </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/4.0.0/jquery.min.js" integrity="sha512-8LENNbXmzI/Gbj+OwXmqR6V4QaUAw0/porPzy1+dQoJqC0JPHedWoe0DDOTL2uHA5XXJyIsPtiMHH86pVlay6A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="app.js"></script>

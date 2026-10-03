@@ -23,20 +23,29 @@
   margin: 0 1em;
 }
 
-.item-kategori i{
+.item-kategori a{
   width: 2.5em;
   height: 2.5em;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border: 2px solid var(--primary);
+  border: 3px solid var(--primary);
   margin-bottom: .3em;
   border-radius: 50%;
+  transition: 150ms all;
+  color: var(--text-primary);
+  text-decoration: none;
 }
 
-.item-kategori {
+.item-kategori:hover a{
+  background-color: var(--primary-hover);
+  color: var(--surface);
+}
+
+.item-kategori{
   text-align: center;
-  width: 4em;
+  width: 5em;
+  cursor: pointer;
 }
 
 .item-kategori p {
