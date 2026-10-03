@@ -35,7 +35,7 @@ openShiftBtn.addEventListener("click", function() {
         sessionStorage.setItem("modalAwal", nominal);
         sessionStorage.setItem("shiftAktif", "true");
 
-        alert("Shift berhasil dibuka!");
+        window.location.href = "../dashboard/dashboard.html"
     });
 
 
