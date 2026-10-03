@@ -199,3 +199,18 @@ document.querySelectorAll(".dropdown-toggle").forEach(function (toggle) {
     });
 });
 
+
+
+const menuToggle = document.getElementById("menuToggle");
+const sidebar = document.getElementById("sidebar");
+
+if (menuToggle && sidebar) {
+    menuToggle.addEventListener("click", function () {
+        sidebar.classList.toggle("active");
+
+        const isOpen = sidebar.classList.contains("active");
+        menuToggle.setAttribute("aria-expanded", isOpen);
+        menuToggle.innerHTML = isOpen ? "✕ Tutup Menu" : "☰ Menu";
+    });
+}
+
