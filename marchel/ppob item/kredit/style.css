@@ -1,15 +1,15 @@
-#pln-form{
+#kredit-form{
   display: flex;
   flex-direction: column;
-  gap: 1em;
+  gap: .7em;
   padding: 1em;
-  margin: 1em 0;
   border-radius: 1em;
+  margin: 1em 0;
   background-color: var(--surface);
   box-shadow: 2px 5px 15px 0px rgba(0, 0, 0, 0.20);
 }
 
-#pln-form > div{
+#kredit-form div{
   display: flex;
   flex-direction: column;
   gap: .3em;
@@ -17,7 +17,7 @@
   font-weight: 600;
 }
 
-#pln-form > div > input, select{
+#kredit-form > div > input, select{
   padding: .4em .6em;
   outline: none;
   border: 2px solid var(--border);
@@ -26,7 +26,7 @@
   font-size: 1em;
 }
 
-#pln-form select{
+#kredit-form > div > select{
   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4.95 10'%3E%3Cpolygon points='3.54 4.26 2.48 5.74 1.41 4.26' fill='%23444'/%3E%3C/svg%3E") no-repeat;
   background-position: right .6em top;
   background-color: var(--surface);
@@ -36,8 +36,7 @@
   cursor: pointer;
 }
 
-
-#pln-form button{
+#kredit-form > button{
   padding: .5em;
   border-radius: .7em;
   color: var(--surface);
@@ -49,7 +48,7 @@
   transition: 150ms all;
 }
 
-#pln-form button:hover{
+#kredit-form > button:hover{
   background-color: var(--primary-hover);
 }
 
@@ -58,7 +57,7 @@
   background-color: var(--border);
 }
 
-#pln-result{
+#kredit-result{
   display: none;
   flex-direction: column;
   gap: .4em;
@@ -76,21 +75,21 @@
   max-width: 26em;
 }
 
-#pln-result h4{
+#kredit-result h4{
   font-size: 1.1em;
 }
 
-#pln-result > div{
+#kredit-result > div{
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-#pln-result > div > p:first-of-type{
+#kredit-result > div > p:first-of-type{
   font-size: .95em;
 }
 
-#pln-result > div > p ~ p{
+#kredit-result > div > p ~ p{
   font-weight: 600;
   max-width: 150px;
   overflow: hidden;
@@ -98,7 +97,7 @@
   white-space: none;
 }
 
-#pln-result > button{
+#kredit-result > button{
   padding: .5em;
   border-radius: .7em;
   color: var(--surface);
@@ -108,32 +107,32 @@
   margin-top: 1em;
 }
 
-#pln-result > div:last-of-type{
+#kredit-result > div:last-of-type{
   display: flex;
   gap: 1em;
   margin-top: .4em;
 }
 
-#pln-result > div:last-of-type > button{
+#kredit-result > div:last-of-type > button{
   padding: .5em;
   width: 100%;
   border-radius: .7em;
-  cursor: pointer;
   transition: 150ms all;
+  cursor: pointer;
 }
 
-#pln-result > div:last-of-type > button:hover{
+#kredit-result > div:last-of-type > button:hover{
   opacity: .7;
 }
 
-#pln-result > div:last-of-type > #cancel{
+#kredit-result > div:last-of-type > #cancel{
   background-color: var(--danger);
   color: var(--surface);
   outline: none;
   border: none;
 }
 
-#pln-result > div:last-of-type > #pay{
+#kredit-result > div:last-of-type > #pay{
   background-color: var(--success);
   color: var(--surface);
   outline: none;

@@ -10,6 +10,7 @@
 </head>
 <body>
   <div id="bg-elem"></div>
+  <div id="overlay"></div>
 
   <div id="head-title">
     <a href=".." class="fa-solid fa-angle-left"></a>
@@ -24,35 +25,52 @@
       
       <div>
         <p>Kasir</p>
-        <div>
-          <i class="fa-solid fa-pen-to-square"></i>
-          <i class="fa-solid fa-trash"></i>
+        <div class="icon-btn">
+          <i class="fa-solid fa-pen-to-square edit-btn"></i>
+          <i class="fa-solid fa-trash delete-btn"></i>
         </div>
       </div>
     </div>
+
     <div class="card-akun">
       <p>Budi Santoso</p>
       
       <div>
         <p>Admin</p>
-        <div>
-          <i class="fa-solid fa-pen-to-square"></i>
-          <i class="fa-solid fa-trash"></i>
+        <div class="icon-btn">
+          <i class="fa-solid fa-pen-to-square edit-btn"></i>
+          <i class="fa-solid fa-trash delete-btn"></i>
         </div>
       </div>
     </div>
+
     <div class="card-akun">
       <p>Saroso Budius</p>
       
       <div>
         <p>Staff</p>
-        <div>
-          <i class="fa-solid fa-pen-to-square"></i>
-          <i class="fa-solid fa-trash"></i>
+        <div class="icon-btn">
+          <i class="fa-solid fa-pen-to-square edit-btn"></i>
+          <i class="fa-solid fa-trash delete-btn"></i>
         </div>
       </div>
     </div>
 
+    <div id="delete-container">
+      <p>Hapus akun <span id="delete-nama"></span>?</p>
+      <div>
+        <button class="cancel">Tidak</button>
+        <button class="continue">Iya</button>
+      </div>
+    </div>
+
+    <div id="edit-container">
+      <p>Test</p>
+      <div>
+        <button class="cancel">Batal</button>
+        <button class="continue">Simpan</button>
+      </div>
+    </div>
 
   </div>
 
