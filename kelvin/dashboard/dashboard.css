@@ -167,6 +167,20 @@ aside nav {
     padding-bottom: 30px;
 }
 
+.menu-toggle {
+    background-color: rgb(109, 2, 2);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-family: inherit;
+    display: none;
+}
+
+.menu-toggle:hover {
+    background-color: rgb(160, 25, 25);
+}
+
+
 @media (max-width: 768px) {
     body {
         flex-direction: column;
@@ -219,6 +233,43 @@ aside nav {
 
     .ringkasan section {
         flex: 1 1 200px;
+    }
+
+    .menu-toggle {
+        display: block;
+        width: fit-content;
+        margin: 10px;
+        padding: 12px 18px;
+    }
+
+    aside#sidebar {
+        display: none;
+        width: 100%;
+        min-width: 0;
+        height: auto;
+        min-height: 0;
+        position: relative;
+        overflow: visible;
+    }
+
+    aside#sidebar.active {
+        display: block;
+    }
+
+    aside#sidebar nav {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        padding: 10px;
+    }
+
+    aside#sidebar nav a {
+        width: 100%;
+        padding: 12px 15px;
+    }
+
+    aside#sidebar nav h3 {
+        width: 100%;
     }
 }
 
