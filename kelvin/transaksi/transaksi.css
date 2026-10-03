@@ -13,9 +13,27 @@ body {
 
 
 aside {
-    min-height: 100vh;
+    height: 100vh;
     background-color: rgb(109, 2, 2);
     min-width: 15vw;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    box-sizing: border-box;
+    position: sticky;
+    top: 0;
+    align-self: flex-start;
+    flex-shrink: 0;
+
+}
+
+aside::-webkit-scrollbar {
+    width: 6px;
+}
+
+aside::-webkit-scrollbar-thumb {
+    background-color: #999;
+    border-radius: 10px;
 }
 
 aside h1 {
@@ -23,7 +41,7 @@ aside h1 {
     color: white;
     border-bottom: 2px solid black;
     background-color: white;
-    color: black;
+    color: black
 }
 
 nav {
@@ -137,7 +155,7 @@ th {
     margin-bottom: 20px;
 }
 
-#produkList {
+.produk-item {
     flex: 1 1 180px;
     padding: 20px;
     border: 1px solid #ddd;
@@ -146,7 +164,7 @@ th {
     transition: 0.3s;
 }
 
-#produkList:hover {
+.produk-item:hover {
     border-color: maroon;
     transform: translateY(-3px);
 }
@@ -159,6 +177,22 @@ th {
     margin-bottom: 15px;
 }
 
+.dropdown-menu {
+    display: none;
+    flex-direction: column;
+    padding-left: 15px;
+}
+
+.dropdown-menu.active {
+    display: flex;
+}
+
+.dropdown-toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
 
 
 @media (max-width: 768px) {
@@ -167,8 +201,12 @@ th {
     }
 
     aside {
-        min-height: auto;
-        min-width: 100%;
+        width: 100%;
+        min-width: 0;
+        height: auto;
+        min-height: 0;
+        position: relative;
+        overflow: visible;
     }
 
     aside h1 {
@@ -186,7 +224,14 @@ th {
         padding: 10px;
     }
 
+    nav h3 {
+        width: 100%;
+        margin-top: 10px;
+    }
+
     main {
+        width: 100%;
+        min-width: 0;
         padding: 20px;
     }
 

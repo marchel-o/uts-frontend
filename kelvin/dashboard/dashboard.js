@@ -74,3 +74,13 @@ logout.addEventListener("click", function(e) {
         window.location.href = "../login/index.html";
     }
 });
+
+
+document.querySelectorAll(".dropdown-toggle").forEach(function (toggle) {
+    toggle.addEventListener("click", function (e) {
+        e.preventDefault();
+
+        const menu = this.nextElementSibling;
+        menu.classList.toggle("active");
+    });
+});

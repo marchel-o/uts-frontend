@@ -188,3 +188,14 @@ btnBayar.addEventListener("click", function() {
         kembalian.textContent = "Kembalian: Rp0";
     }
 });
+
+
+document.querySelectorAll(".dropdown-toggle").forEach(function (toggle) {
+    toggle.addEventListener("click", function (e) {
+        e.preventDefault();
+
+        const menu = this.nextElementSibling;
+        menu.classList.toggle("active");
+    });
+});
+

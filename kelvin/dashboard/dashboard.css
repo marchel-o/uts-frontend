@@ -10,10 +10,26 @@ body {
 }
 
 aside {
-    min-height: 100vh;
+    height: 100vh;
     background-color: rgb(109, 2, 2);
     min-width: 15vw;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    box-sizing: border-box;
+    position: sticky;
+    top: 0;
+    align-self: flex-start;
 
+}
+
+aside::-webkit-scrollbar {
+    width: 6px;
+}
+
+aside::-webkit-scrollbar-thumb {
+    background-color: #999;
+    border-radius: 10px;
 }
 
 aside h1 {
@@ -32,7 +48,17 @@ nav {
     gap: 30px;
     
 }
+
+nav h3 {
+    color: white;
+    font-size: 13px;
+    margin-top: 15px;
+    padding: 0 10px;
+    text-transform: uppercase;
+}
+
 nav a {
+    display: block;
     text-decoration: none;
     color: white;
     padding: 20px;
@@ -119,14 +145,40 @@ tbody tr:hover {
     background-color: #f8f9fa;
 }
 
+.dropdown-menu {
+    display: none;
+    flex-direction: column;
+    padding-left: 15px;
+    flex-shrink: 0;
+}
+
+.dropdown-menu.active {
+    display: flex;
+}
+
+.dropdown-toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+aside nav {
+    padding-bottom: 30px;
+}
+
 @media (max-width: 768px) {
     body {
         flex-direction: column;
     }
 
     aside {
-        min-height: auto;
-        min-width: 100%;
+        width: 100%;
+        min-width: 0;
+        height: auto;
+        min-height: 0;
+        position: relative;
+        overflow: visible;
     }
 
     aside h1 {
@@ -138,6 +190,11 @@ tbody tr:hover {
         flex-wrap: wrap;
         gap: 5px;
         padding: 10px;
+    }
+
+    nav h3 {
+        width: 100%;
+        margin-top: 10px;
     }
 
     nav a {
