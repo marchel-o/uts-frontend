@@ -1,0 +1,111 @@
+#topup-ewallet-form{
+  display: flex;
+  flex-direction: column;
+  gap: .7em;
+  padding: 1em;
+  border-radius: 1em;
+  margin: 1em 0;
+  background-color: var(--surface);
+  box-shadow: 2px 5px 15px 0px rgba(0, 0, 0, 0.20);
+}
+
+#topup-ewallet-form div{
+  display: flex;
+  flex-direction: column;
+  gap: .3em;
+  font-size: .9em;
+  font-weight: 600;
+}
+
+#topup-ewallet-form > div > input, select{
+  padding: .4em .6em;
+  outline: none;
+  border: 2px solid var(--border);
+  border-radius: .5em;
+  background-color: var(--surface);
+}
+
+#topup-ewallet-form > div > select{
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4.95 10'%3E%3Cpolygon points='3.54 4.26 2.48 5.74 1.41 4.26' fill='%23444'/%3E%3C/svg%3E") no-repeat;
+  background-position: right .6em top;
+  background-color: var(--surface);
+  -moz-appearance: none; 
+  -webkit-appearance: none; 
+  appearance: none;
+}
+
+#topup-ewallet-form > button{
+  padding: .5em;
+  border-radius: .7em;
+  color: var(--surface);
+  background-color: var(--primary);
+  border: none;
+  outline: none;
+}
+
+.price-item{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price-item p:first-of-type{
+  color: var(--text-primary);
+  font-size: .85em;
+}
+
+.price-item > p ~ p{
+  font-weight: 500;
+}
+
+.bold-line{
+  height: .5px;
+  width: 100%;
+  background-color: var(--border);
+  margin: .5em 0;
+}
+
+#ewallet-result{
+  display: none;
+  position: absolute;
+  width: 90%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--surface);
+  box-shadow: 2px 5px 15px 0px rgba(0, 0, 0, 0.20);
+  padding: 1em;
+  border-radius: 1em;
+  z-index: 2;
+}
+
+#ewallet-result > h4{
+  font-size: 1.1em;
+  margin-bottom: .6em;  
+}
+
+#ewallet-result > div:last-of-type{
+  display: flex;
+  gap: 1em;
+  margin-top: .8em;
+}
+
+#ewallet-result > div:last-of-type > button{
+  padding: .5em;
+  width: 100%;
+  border-radius: .7em;
+}
+
+#ewallet-result > div:last-of-type > #cancel{
+  background-color: var(--danger);
+  color: var(--surface);
+  outline: none;
+  border: none;
+}
+
+#ewallet-result > div:last-of-type > #pay{
+  background-color: var(--success);
+  color: var(--surface);
+  outline: none;
+  border: none;
+}

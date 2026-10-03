@@ -1,9 +1,51 @@
-body{
+#tambah-akun-btn{
   padding: 1em;
+  border: none;
+  outline: none;
+  color: var(--text-light);
+  border-radius: .5em;
+  margin: 1em 0;
+  background-color: var(--primary);
+  box-shadow: 2px 5px 15px 0px rgba(0, 0, 0, 0.20);
+}
+
+#list-akun{
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
 }
 
 .card-akun{
-  background-color: var(--primary);
   padding: 1em;
   border-radius: 1em;
+  background-color: var(--surface);
+  box-shadow: 2px 5px 15px 0px rgba(0, 0, 0, 0.20);
+}
+
+.card-akun > p:first-of-type{
+  font-weight: 600;
+  font-size: 1.1em;
+  color: var(--primary);
+}
+
+.card-akun > div{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-akun > div > p{
+  font-weight: 550;
+  color: var(--text-secondary);
+}
+
+.card-akun > div > div{
+  display: flex;
+  gap: .8em;
+}
+.card-akun > div > div > i:first-of-type{
+  color: var(--info);
+}
+.card-akun > div > div > i ~ I{
+  color: var(--danger);
 }
