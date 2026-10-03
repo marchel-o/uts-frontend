@@ -5,7 +5,7 @@ $("#topup-ewallet-form").on("submit", (e) => {
   $("#ewallet-result #provider-val").text($("#ewallet-provider").val());
   $("#ewallet-result #nomor-val").text($("#ewallet-nomor").val());
   $("#ewallet-result #price-val").text($("#ewallet-nominal").val());
-  $("#ewallet-result #total-val").text(parseInt($("#ewallet-nominal").val())+2500);
+  $("#ewallet-result #total-val").text((parseInt($("#ewallet-nominal").val())+2500).toLocaleString('id-ID'));
 })
 
 $("#overlay, #cancel, #pay").on("click", () => {
