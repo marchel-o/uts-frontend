@@ -5,7 +5,6 @@ tanggal.textContent = tgl_skr
 totalTransaksi = document.getElementById("totalTransaksi");
 const produkTerjual = document.getElementById("produkTerjual");
 const totalSale = document.getElementById("totalSale");
-const penjualan = 125000;
 
 
 
@@ -16,11 +15,50 @@ else {
     shift.textContent = "Shift Belum Aktif";
 }
 
-totalTransaksi.textContent = "3";
+
+let riwayat = JSON.parse(
+    localStorage.getItem("riwayatTransaksi")
+) || [];
+let penjualan = 0;
+let jumlahProduk = 0;
+
+riwayat.forEach(function(item) {
+    penjualan += item.total;
+
+    item.items.forEach(function(produk) {
+        jumlahProduk += produk.jumlah;
+    });
+});
+
+
+
 totalSale.textContent = "Rp" + penjualan.toLocaleString("id-ID");
+totalTransaksi.textContent = riwayat.length;
+produkTerjual.textContent = jumlahProduk;
 
 
-produkTerjual.textContent = 12;
+
+const tabel = document.querySelector("table tbody");
+tabel.innerHTML = "";
+
+riwayat.slice(-3).reverse().forEach(function(item) {
+    tabel.innerHTML += `
+        <tr>
+            <td>${item.nomor}</td>
+            <td>${item.tanggal}</td>
+            <td>Rp${item.total.toLocaleString("id-ID")}</td>
+            <td>Selesai</td>
+        </tr>
+    `;
+});
+
+if (riwayat.length === 0) {
+    tabel.innerHTML = `
+        <tr>
+            <td colspan="4">Belum ada transaksi</td>
+        </tr>
+    `;
+}
 
 
 const logout = document.getElementById("logout");

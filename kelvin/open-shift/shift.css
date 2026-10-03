@@ -126,3 +126,85 @@ strong {
 .infoKasir:hover, .infoTanggal:hover {
     transform: scale(1.05);
 }
+
+
+@media screen and (max-width: 900px) {
+    .container {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .leftPanel {
+        padding: 20px;
+        width: 100%;
+    }
+
+    .rightPanel {
+        width: 100%;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 45px;
+    }
+
+    #amountDisp {
+        font-size: 40px;
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        padding: 12px;
+        gap: 15px;
+    }
+
+    .leftPanel,
+    .rightPanel {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .numpad {
+        gap: 8px;
+    }
+
+    .numpad input {
+        padding: 10px;
+        min-height: 50px;
+        font-size: 18px;
+    }
+
+    #amountDisp {
+        font-size: 28px;
+        padding: 12px;
+        padding-right: 10px;
+        margin-bottom: 15px;
+        overflow-wrap: anywhere;
+    }
+
+    .shift-info {
+        gap: 12px;
+    }
+
+    .infoKasir,
+    .infoTanggal {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    #openShiftBtn {
+        padding: 12px;
+        font-size: 16px;
+    }
+}
