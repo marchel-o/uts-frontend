@@ -34,6 +34,7 @@ function renderMembers() {
         return `<tr>
         <td><input id="edit-name" value="${m.name}"></td>
         <td><input id="edit-phone" value="${m.phone}"></td>
+        <td><input id="edit-dob" type="date" value="${m.dob || ""}"></td>
         <td>${m.joinDate || "-"}</td>
         <td>
           <select id="edit-status">
@@ -55,6 +56,7 @@ function renderMembers() {
       return `<tr>
       <td>${m.name}</td>
       <td>${m.phone}</td>
+      <td>${m.dob || '-'}</td>
       <td>${m.joinDate || "-"}</td>
       <td>${statusBadge}</td>
       <td>${m.points} pts</td>
@@ -81,6 +83,7 @@ function saveEdit(i) {
   const list = loadMembers();
   const name = document.getElementById("edit-name").value.trim();
   const phone = document.getElementById("edit-phone").value.trim();
+  const dob = document.getElementById("edit-dob").value;
   const status = document.getElementById("edit-status").value;
   if (!name || !phone) {
     alert("Nama dan No. HP wajib diisi.");
