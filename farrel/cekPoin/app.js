@@ -29,7 +29,7 @@ function searchMember() {
   }
   currentMemberPhone = m.phone;
   res.innerHTML = `<h4>Konfirmasi</h4><p>Nama: <b>${m.name}</b></p><p>Total Poin: <b id="pts-val">${m.points} pts</b></p>
-    <p>Tukar 100 poin = diskon Rp10.000</p>
+    <p>Tukar 100 poin = diskon Rp1.000</p>
     <div class="scan-row" style="margin-top:12px"><input id="pts-amount" type="number" placeholder="Nominal belanja (Rp)">
     <button type="button" class="btn" onclick="addPoints()">+ Tambah Poin</button></div>`;
 }
@@ -43,7 +43,7 @@ function addPoints() {
     alert("Masukkan nominal belanja yang valid.");
     return;
   }
-  const earned = Math.floor(amt / 10000);
+  const earned = Math.floor(amt / 1000);
   const list = loadMembers();
   const m = list.find((x) => x.phone === currentMemberPhone);
   if (!m) return;
