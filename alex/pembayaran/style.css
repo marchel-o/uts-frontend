@@ -1,0 +1,72 @@
+.total {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: .8em 1em;
+    border-radius: 1em;
+    background-color: var(--primary, #6D0202);
+    color: var(--text-light, #FFFFFF);
+}
+
+.total b {
+    font-size: 1.6em;
+}
+
+.methods {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: .5em;
+    padding: 0;
+    border: none;
+}
+
+.methods label {
+    margin: 0;
+    padding: .7em;
+    border: 2px solid var(--border, #D6D3CB);
+    border-radius: .7em;
+    background-color: var(--surface, #FFFFFF);
+    text-align: center;
+    cursor: pointer;
+}
+
+.methods input {
+    position: absolute;
+    width: 0;
+    opacity: 0;
+}
+
+.methods label:has(input:checked) {
+    border-color: var(--primary, #6D0202);
+    font-weight: 600;
+}
+
+.methods label:has(input:focus-visible) {
+    outline: 2px solid var(--info, #0369A1);
+}
+
+.quick {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5em;
+    margin-top: .5em;
+}
+
+.qr {
+    width: 10em;
+    height: 10em;
+    margin: .8em auto;
+    border: .5em solid #fff;
+    outline: 1px solid var(--border, #D6D3CB);
+    background: repeating-conic-gradient(#111 0 25%, #fff 0 50%) 0 0/1.2em 1.2em;
+}
+
+.check {
+    display: flex;
+    align-items: center;
+    gap: .5em;
+}
+
+.check input {
+    width: auto;
+}
