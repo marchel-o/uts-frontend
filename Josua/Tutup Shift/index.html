@@ -2,45 +2,43 @@
 <html lang="id">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Tutup Shift (Close Register)</title>
+  <link rel="stylesheet" href="../../global.css">
+  <link rel="stylesheet" href="/components/sidebar.css">
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <div class="app">
-    <nav class="nav">
-      <h1>Kasir Shift</h1>
+  <div id="sidebar-container"></div>
+  <button id="menuToggle" class="menu-toggle" aria-expanded="false">☰ Menu</button>
 
-      <a href="../Tarik Tunai/index.html">Tarik Tunai</a>
-      <a href="index.html" class="active">Tutup Shift</a>
-      <a href="../Laporan Penjulan/index.html">Laporan Penjualan</a>
-      <a href="../Pengaturan Hardware/index.html">Pengaturan Hardware</a>
-    </nav>
+  <div id="bg-elem"></div>
+  <div id="overlay"></div>
 
-    <main class="main">
-      <h2>Tutup Shift (Close Register)</h2>
+  <main class="main">
+    <h2>Tutup Shift (Close Register)</h2>
 
-      <p class="sub">
-        Hitung uang fisik di laci. Total sistem disembunyikan sampai Anda mengirim (blind close).
-      </p>
+    <p class="sub">
+      Hitung uang fisik di laci. Total sistem disembunyikan sampai Anda mengirim (blind close).
+    </p>
 
-      <div class="card">
-        <div class="grid" id="denoms"></div>
+    <div class="card">
+      <div class="grid" id="denoms"></div>
 
-        <div class="total">
-          Total hitungan: <span id="countTotal">Rp 0</span>
-        </div>
-
-        <button type="button" class="btn" id="closeBtn">
-          Kirim &amp; tutup shift
-        </button>
-
-        <div id="closeMsg" class="msg" hidden></div>
+      <div class="total">
+        Total hitungan: <span id="countTotal">Rp 0</span>
       </div>
-    </main>
-  </div>
+
+      <button type="button" class="btn" id="closeBtn">
+        Kirim &amp; tutup shift
+      </button>
+
+      <div id="closeMsg" class="msg" hidden></div>
+    </div>
+  </main>
 
   <script src="script.js"></script>
+  <script src="/components/sidebar.js"></script>
 </body>
 </html>
