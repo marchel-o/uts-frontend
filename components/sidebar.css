@@ -1,0 +1,160 @@
+#sidebar {
+    width: 15vw;
+    min-width: 200px;
+    height: 100vh;
+    background-color: rgb(109, 2, 2);
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    position: sticky;
+    top: 0;
+    align-self: flex-start;
+    flex-shrink: 0;
+}
+
+
+#sidebar-container {
+    flex: 0 0 15vw;
+    width: 15vw;
+    min-width: 200px;
+    height: 100vh;
+}
+
+#sidebar-container #sidebar {
+    position: sticky;
+    top: 0;
+    left: auto;
+    width: 100%;
+    min-width: 0;
+    height: 100vh;
+}
+
+
+
+#sidebar::-webkit-scrollbar {
+    width: 6px;
+}
+
+#sidebar::-webkit-scrollbar-thumb {
+    background-color: #999;
+    border-radius: 10px;
+}
+
+
+#sidebar h1 {
+    padding: 30px;
+    background-color: white;
+    color: black;
+    border-bottom: 2px solid black;
+}
+
+#sidebar nav {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    padding-bottom: 30px;
+    gap: 30px;
+}
+
+#sidebar nav h3 {
+    color: white;
+    font-size: 13px;
+    margin-top: 15px;
+    padding: 0 10px;
+    text-transform: uppercase;
+}
+
+#sidebar nav a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 20px;
+    border-bottom: 1px solid rgb(247, 247, 247);
+}
+
+#sidebar nav a:hover {
+    background-color: rgb(160, 25, 25);
+    transition: 0.5s;
+}
+
+#sidebar .sidebar-dropdown {
+    width: 100%;
+}
+
+#sidebar .dropdown-toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    cursor: pointer;
+}
+
+#sidebar .dropdown-menu {
+    display: none;
+    flex-direction: column;
+    padding-left: 15px;
+    margin-top: 5px;
+}
+
+#sidebar .dropdown-menu.active {
+    display: flex;
+}
+
+#sidebar .dropdown-menu a {
+    padding: 10px 12px;
+    font-size: 14px;
+}
+
+.menu-toggle {
+    display: none;
+    background-color: rgb(109, 2, 2);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.menu-toggle:hover {
+    background-color: rgb(160, 25, 25);
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+        width: fit-content;
+        margin: 10px;
+        padding: 12px 18px;
+    }
+
+    #sidebar {
+        display: none;
+        width: 100%;
+        min-width: 0;
+        height: auto;
+        position: relative;
+        overflow: visible;
+    }
+
+    #sidebar.active {
+        display: block;
+    }
+
+    #sidebar h1 {
+        padding: 15px 20px;
+    }
+
+    #sidebar nav {
+        gap: 5px;
+        padding: 10px;
+    }
+
+    #sidebar nav a {
+        width: 100%;
+        padding: 12px 15px;
+    }
+
+    #sidebar nav h3 {
+        width: 100%;
+    }
+}
