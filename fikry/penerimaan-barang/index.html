@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penerimaan Barang</title>
+    <link rel="stylesheet" href="../../global.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="bg-elem"></div>
+
+    <header id="head-title">
+        <nav type="button" aria-label="Kembali ke manajemen stok">
+            <a href="../manajemen-stok/index.html">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    aria-hidden="true">
+                    <line x1="19" y1="12" x2="5" y2="12"></line>
+                    <polyline points="12 19 5 12 12 5"></polyline>
+                </svg>
+            </a>
+        </nav>
+        <h1>Penerimaan Barang</h1>
+    </header>
+
+    <main>
+        <section>
+            <form id="form-penerimaan" novalidate>
+                <label>Nama Supplier
+                    <input name="supplier" type="text" placeholder="Masukkan nama supplier..." autocomplete="off"
+                        required>
+                </label>
+                <label>Tanggal Terima
+                    <input name="tanggal" type="date" required>
+                </label>
+            </form>
+        </section>
+
+        <section>
+            <form id="form-barang" novalidate>
+                <label>Kode Barang
+                    <input name="kode" type="text" placeholder="Contoh: BRG-001" autocomplete="off" required>
+                </label>
+                <label>Nama Barang
+                    <input name="nama" type="text" placeholder="Masukkan nama barang..." autocomplete="off" required>
+                </label>
+                <label>Jumlah
+                    <input name="jumlah" type="number" min="1" step="1" inputmode="numeric" placeholder="0" required>
+                </label>
+                <button type="submit">Tambah ke List</button>
+            </form>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col">Kode</th>
+                        <th scope="col">Nama Barang</th>
+                        <th scope="col">Jumlah</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+
+            <p id="info">Belum ada barang di list.</p>
+
+            <button id="simpan" type="submit" form="form-penerimaan" disabled>Simpan Data</button>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

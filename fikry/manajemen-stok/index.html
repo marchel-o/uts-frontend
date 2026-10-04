@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manajemen Stok</title>
+    <link rel="stylesheet" href="../../global.css">
+    <link rel="stylesheet" href="../../components/sidebar.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="bg-elem"></div>
+    <div id="sidebar-container"></div>
+    <div id="page">
+    <button type="button" class="menu-toggle" id="menuToggle" aria-controls="sidebar" aria-expanded="false">☰ Menu</button>
+
+    <header id="head-title">
+        <nav type="button" aria-label="Kembali ke dashboard">
+            <a href="../../kelvin/dashboard/dashboard.html">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    aria-hidden="true">
+                    <line x1="19" y1="12" x2="5" y2="12"></line>
+                    <polyline points="12 19 5 12 12 5"></polyline>
+                </svg>
+            </a>
+        </nav>
+        <h1>Manajemen Stok</h1>
+    </header>
+
+    <main>
+        <nav aria-label="Menu manajemen stok">
+            <a href="../cek-stok-internal/index.html">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    aria-hidden="true">
+                    <path d="M21 8l-9-5-9 5v8l9 5 9-5z"></path>
+                    <path d="M3 8l9 5 9-5"></path>
+                    <line x1="12" y1="13" x2="12" y2="21"></line>
+                </svg>
+                <strong>Cek Stok</strong>
+                <span>Cari stok rak dan gudang</span>
+            </a>
+
+            <a href="../penerimaan-barang/index.html">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    aria-hidden="true">
+                    <path d="M4 14v5a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-5"></path>
+                    <polyline points="7 10 12 15 17 10"></polyline>
+                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+                <strong>Penerimaan Barang</strong>
+                <span>Catat barang masuk dari supplier</span>
+            </a>
+
+            <a href="../barang-rusak/index.html">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    aria-hidden="true">
+                    <path d="M10.3 3.9L1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"></path>
+                    <line x1="12" y1="9" x2="12" y2="13"></line>
+                    <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                </svg>
+                <strong>Laporan Barang Rusak</strong>
+                <span>Laporkan barang rusak atau cacat</span>
+            </a>
+
+            <a href="../retur-barang/index.html">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    aria-hidden="true">
+                    <polyline points="1 4 1 10 7 10"></polyline>
+                    <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path>
+                </svg>
+                <strong>Retur Barang</strong>
+                <span>Kembalikan barang ke supplier</span>
+            </a>
+        </nav>
+    </main>
+    </div>
+
+    <script src="../../components/sidebar.js"></script>
+</body>
+
+</html>

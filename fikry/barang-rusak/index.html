@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laporan Barang Rusak</title>
+    <link rel="stylesheet" href="../../global.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="bg-elem"></div>
+
+    <header id="head-title">
+        <nav type="button" aria-label="Kembali ke manajemen stok">
+            <a href="../manajemen-stok/index.html">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    aria-hidden="true">
+                    <line x1="19" y1="12" x2="5" y2="12"></line>
+                    <polyline points="12 19 5 12 12 5"></polyline>
+                </svg>
+            </a>
+        </nav>
+        <h1>Laporan Barang Rusak</h1>
+    </header>
+
+    <main>
+        <form novalidate>
+            <label>Kode Barang
+                <input name="kode" type="text" placeholder="Contoh: BRG-001" autocomplete="off" required autofocus>
+            </label>
+            <label>Jumlah Rusak
+                <input name="jumlah" type="number" min="1" step="1" inputmode="numeric" placeholder="0" required>
+            </label>
+            <label>Nama Barang
+                <input name="nama" type="text" placeholder="Masukkan nama barang..." autocomplete="off" required>
+            </label>
+            <label>Keterangan / Lokasi Ditemukan
+                <textarea name="keterangan" rows="2" placeholder="Contoh: Kemasan sobek, ditemukan di rak A2"
+                    required></textarea>
+            </label>
+            <button type="submit">Simpan Laporan</button>
+        </form>
+
+        <table>
+            <caption>Riwayat Laporan Hari Ini</caption>
+            <thead>
+                <tr>
+                    <th scope="col">Waktu</th>
+                    <th scope="col">Kode</th>
+                    <th scope="col">Nama</th>
+                    <th scope="col">Jumlah</th>
+                    <th scope="col">Keterangan</th>
+                    <th scope="col">Status</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+        <p id="info" hidden>Belum ada laporan hari ini.</p>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
