@@ -1,0 +1,1 @@
+window.location.replace("https://marchel-o.github.io/uts-frontend/kelvin/dashboard.html");
