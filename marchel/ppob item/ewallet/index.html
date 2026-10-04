@@ -3,83 +3,91 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css" integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="/global.css">
+  <link rel="stylesheet" href="/components/sidebar.css">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="../../../global.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css" integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg==" crossorigin="anonymous" referrerpolicy="no-referrer">
   <title>E-Wallet</title>
 </head>
 <body>
   <div id="bg-elem"></div>
   <div id="overlay"></div>
+  <button class="menu-toggle" id="menuToggle" aria-label="Buka menu" aria-expanded="false">
+    ☰ Menu
+  </button>
 
-  <div id="head-title">
-    <a href="../../ppob/index.html" class="fa-solid fa-angle-left"></a>
-    <h3>E-Wallet</h3>
-  </div>
+  <div id="sidebar-container"></div>
 
-  <form id="topup-ewallet-form">
-    <div>
-      <label for="ewallet-provider">Provider</label>
-      <select required name="ewallet-provider" id="ewallet-provider">
-        <option value="" disabled selected hidden>Pilih Provider</option>
-        <option value="GoPay">GoPay</option>
-        <option value="OVO">OVO</option>
-        <option value="Dana">Dana</option>
-        <option value="ShopeePay">ShopeePay</option>
-        <option value="LinkAja">LinkAja</option>
-      </select>
+  <main>
+    <div id="head-title">
+      <h3>E-Wallet</h3>
     </div>
   
-    <div>
-      <label for="ewallet-nomor">Nomor Akun</label>
-      <input type="text" name="ewallet-nomor" id="ewallet-nomor" maxlength="13" required />
-    </div>
-  
-    <div>
-      <label for="ewallet-nominal">Nominal</label>
-      <input type="number" name="ewallet-nominal" id="ewallet-nominal" required />
-    </div>
-
-    <button type="submit">Top Up</button>
-  </form>
-
-  <div id="ewallet-result">
-    <h4>Konfirmasi</h4>
-
-    <div class="price-item">
-      <p>E-Wallet:</p>
-      <p id="provider-val">GoPay</p>
-    </div>
-
-    <div class="price-item">
-      <p>No. HP:</p>
-      <p id="nomor-val">0814-8206-4125</p>
-    </div>
-
-    <div class="price-item">
-      <p>Harga:</p>
-      <p id="price-val">50.000</p>
-    </div>
-
-    <div class="price-item">
-      <p>Admin:</p>
-      <p>2.500</p>
-    </div>
-
-    <div class="bold-line"></div>
+    <form id="topup-ewallet-form">
+      <div>
+        <label for="ewallet-provider">Provider</label>
+        <select required name="ewallet-provider" id="ewallet-provider">
+          <option value="" disabled selected hidden>Pilih Provider</option>
+          <option value="GoPay">GoPay</option>
+          <option value="OVO">OVO</option>
+          <option value="Dana">Dana</option>
+          <option value="ShopeePay">ShopeePay</option>
+          <option value="LinkAja">LinkAja</option>
+        </select>
+      </div>
     
-    <div class="price-item">
-      <p>Total:</p>
-      <p id="total-val">52.500</p>
+      <div>
+        <label for="ewallet-nomor">Nomor Akun</label>
+        <input type="text" name="ewallet-nomor" id="ewallet-nomor" maxlength="13" required />
+      </div>
+    
+      <div>
+        <label for="ewallet-nominal">Nominal</label>
+        <input type="number" name="ewallet-nominal" id="ewallet-nominal" required />
+      </div>
+  
+      <button type="submit">Top Up</button>
+    </form>
+  
+    <div id="ewallet-result">
+      <h4>Konfirmasi</h4>
+  
+      <div class="price-item">
+        <p>E-Wallet:</p>
+        <p id="provider-val">GoPay</p>
+      </div>
+  
+      <div class="price-item">
+        <p>No. HP:</p>
+        <p id="nomor-val">0814-8206-4125</p>
+      </div>
+  
+      <div class="price-item">
+        <p>Harga:</p>
+        <p id="price-val">50.000</p>
+      </div>
+  
+      <div class="price-item">
+        <p>Admin:</p>
+        <p>2.500</p>
+      </div>
+  
+      <div class="bold-line"></div>
+      
+      <div class="price-item">
+        <p>Total:</p>
+        <p id="total-val">52.500</p>
+      </div>
+  
+      <div>
+        <button id="cancel">Batal</button>
+        <button id="pay">Bayar</button>
+      </div>
     </div>
-
-    <div>
-      <button id="cancel">Batal</button>
-      <button id="pay">Bayar</button>
-    </div>
-  </div>
+  </main>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/4.0.0/jquery.min.js" integrity="sha512-8LENNbXmzI/Gbj+OwXmqR6V4QaUAw0/porPzy1+dQoJqC0JPHedWoe0DDOTL2uHA5XXJyIsPtiMHH86pVlay6A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="/components/sidebar.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
