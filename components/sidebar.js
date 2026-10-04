@@ -1,5 +1,5 @@
 
-fetch("../../components/sidebar.html")
+fetch("/components/sidebar.html")
     .then(response => {
         if (!response.ok) {
             throw new Error("Sidebar gagal dimuat");

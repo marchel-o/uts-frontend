@@ -11,3 +11,9 @@ $("#overlay, #cancel, #pay").on("click", () => {
   $("#pln-result").css("display", "none");
   $("#overlay").css("display", "none");
 })
+
+$("#pln-result").on("submit", (e) => {
+  e.preventDefault();
+  $("#pln-result").css("display", "none");
+  $("#overlay").css("display", "none");
+})
