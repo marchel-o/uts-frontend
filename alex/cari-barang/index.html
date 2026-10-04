@@ -1,26 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cari Barang</title>
+    <title>Cari Barang Manual - Kasir</title>
+    <link rel="stylesheet" href="../../global.css">
+    <link rel="stylesheet" href="../../components/sidebar.css">
+    <link rel="stylesheet" href="../kasir.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="header">
-        <h1>Kasir Minimarket</h1>
-        <nav>
-            <a href="cari-barang.html">Cari Barang</a>
-        </nav>
-    </header>
-    <main class="main">
-        <section>
-            <h1>Cari Barang</h1>
-            <p>Mencari barang tanpa barcode atau barang dengan label yang rusak</p>
-            <input type="search" placeholder="Masukan nama barang" class="search">
-        </section>
+    <button id="menuToggle" class="menu-toggle" aria-expanded="false">☰ Menu</button>
+    <div id="sidebar-container"></div>
+
+    <main>
+        <h1>Cari Barang Manual</h1>
+        <p class="hint">Untuk barang tanpa barcode atau label rusak. Ketik nama, kode, atau kategori. Tekan Enter untuk menambah hasil teratas.</p>
+        <div class="two-col">
+            <section class="stack">
+                <input id="q" type="search" placeholder="Contoh: mie goreng, air, sembako" autocomplete="off" autofocus>
+                <p id="info" class="hint" aria-live="polite"></p>
+                <ul id="hasil" class="results"></ul>
+            </section>
+            <aside class="card struk">
+                <h2>Pesanan berjalan</h2>
+                <div id="cart"></div>
+                <a id="bayar" class="btn pri block" href="../pembayaran/index.html">Bayar</a>
+            </aside>
+        </div>
     </main>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script src="../../components/sidebar.js"></script>
+    <script src="../kasir.js"></script>
     <script src="app.js"></script>
 </body>
 </html>

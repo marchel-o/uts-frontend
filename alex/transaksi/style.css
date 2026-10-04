@@ -1,0 +1,38 @@
+.change {
+    padding: 1em;
+    border-radius: 1em;
+    background-color: var(--success, #15803D);
+    color: var(--text-light, #FFFFFF);
+    text-align: center;
+}
+
+.change b {
+    display: block;
+    font-size: 2em;
+}
+
+.actions {
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+}
+
+/* Cetak struk: sembunyikan semua kecuali struk */
+@media print {
+    #sidebar-container, .menu-toggle, .noprint {
+        display: none !important;
+    }
+
+    body {
+        display: block;
+    }
+
+    main {
+        max-width: none;
+    }
+
+    .struk {
+        border: none;
+    }
+
+}

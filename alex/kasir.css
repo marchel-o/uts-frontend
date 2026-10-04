@@ -1,0 +1,177 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg, #F4F1EA);
+    color: var(--text-primary, #1F1F1F);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+h1 {
+    font-size: 1.5em;
+}
+
+h2 {
+    font-size: 1.05em;
+    margin-bottom: .5em;
+}
+
+p, ul {
+    margin: 0;
+}
+
+small {
+    display: block;
+    font-size: .85em;
+    opacity: .7;
+}
+
+.hint {
+    font-size: .85em;
+    opacity: .7;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+/* Layout dua kolom (konten | ringkasan) */
+.two-col {
+    display: grid;
+    grid-template-columns: 1fr 17em;
+    gap: 1em;
+    align-items: start;
+}
+
+@media (max-width: 768px) {
+    .two-col {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+.stack {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+/* Kartu, form, tombol */
+.card {
+    padding: 1em;
+    border: 1px solid var(--border, #D6D3CB);
+    border-radius: 1em;
+    background-color: var(--surface, #FFFFFF);
+}
+
+label {
+    display: block;
+    margin: .7em 0 .3em;
+    font-size: .9em;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: .4em .6em;
+    border: 2px solid var(--border, #D6D3CB);
+    border-radius: .5em;
+    outline: none;
+    background-color: var(--surface, #FFFFFF);
+    color: var(--text-primary, #1F1F1F);
+    font: inherit;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: var(--primary, #6D0202);
+}
+
+.btn {
+    display: inline-block;
+    padding: .5em 1em;
+    border: 2px solid var(--border, #D6D3CB);
+    border-radius: .7em;
+    background-color: var(--surface, #FFFFFF);
+    color: var(--text-primary, #1F1F1F);
+    font: inherit;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn.pri {
+    border-color: var(--primary, #6D0202);
+    background-color: var(--primary, #6D0202);
+    color: var(--text-light, #FFFFFF);
+}
+
+.btn.pri:hover {
+    border-color: var(--primary-hover, #A01919);
+    background-color: var(--primary-hover, #A01919);
+}
+
+.btn.bad {
+    border-color: var(--danger, #DC2626);
+    background-color: var(--danger, #DC2626);
+    color: var(--text-light, #FFFFFF);
+}
+
+.btn.block {
+    display: block;
+    width: 100%;
+    margin-top: .8em;
+}
+
+.btn:disabled {
+    opacity: .5;
+    cursor: not-allowed;
+}
+
+.err {
+    min-height: 1.4em;
+    margin-top: .5em;
+    font-size: .9em;
+    color: var(--danger, #DC2626);
+}
+
+.ok {
+    color: var(--success, #15803D);
+}
+
+/* Struk / ringkasan pesanan */
+.struk {
+    font-family: Consolas, "Courier New", monospace;
+    font-size: .9em;
+}
+
+.struk h2 {
+    padding-bottom: .5em;
+    border-bottom: 2px dashed var(--border, #D6D3CB);
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    gap: .5em;
+    padding: .4em 0;
+    border-bottom: 1px dashed var(--border, #D6D3CB);
+}
+
+.row .name {
+    flex: 1;
+}
+
+.row.sum {
+    padding-top: .7em;
+    border-bottom: none;
+    font-size: 1.1em;
+}
+
+.row.sum b {
+    margin-left: auto;
+}

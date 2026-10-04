@@ -1,0 +1,7 @@
+textarea {
+    resize: vertical;
+}
+
+#pin {
+    letter-spacing: .3em;
+}
