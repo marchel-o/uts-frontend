@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <button class="menu-toggle" id="menuToggle" aria-label="Buka menu" aria-expanded="false">
+        ☰ Menu
+    </button>
+    <aside id="sidebar">
+        <h1>Kasir</h1>
+        <nav>            
+            <a href="dashboard.html">Dashboard</a>
+            <a href="../transaksi/index.html">Transaksi</a>
+            <a href="../../farrel/riwayat/index.html">Riwayat Transaksi</a>
+            <a href="../../marchel/tambah%20produk/index.html">Tambah Produk</a>
+
+            
+            <div class="dropdown">
+                <a href="#" class="dropdown-toggle">
+                    Transaksi Lanjutan
+                    <span>⌄</span>
+                </a>
+                <div class="dropdown-menu">
+                    <a href="../../alex/cari-barang/index.html">Cari Barang</a>
+                    <a href="../../alex/transaksi/index.html">Struk</a>
+                    <a href="../../alex/pembayaran/index.html">Pembayaran</a>
+                    <a href="../../alex/void/index.html">Void Transaksi</a>
+                </div>
+            </div>
+
+
+            <div class="dropdown">
+                <a href="#" class="dropdown-toggle">
+                    Operasional Kasir
+                    <span>⌄</span>
+                </a>
+                <div class="dropdown-menu">
+                    <a href="../../farrel/kas/index.html">Kas</a>
+                    <a href="../../farrel/cekPoin/index.html">Cek Poin</a>
+                    <a href="../../farrel/daftarMember/index.html">Daftar Member</a>
+                    <a href="../../Josua/Tutup%20Shift/index.html">Tutup Shift</a>
+                    <a href="../../Josua/Tarik%20Tunai/index.html">Tarik Tunai</a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <a href="#" class="dropdown-toggle">
+                    Laporan & Pengaturan
+                    <span>⌄</span>
+                </a>
+                <div class="dropdown-menu">
+                    <a href="../../Josua/Laporan%20Penjulan/index.html">Laporan Penjualan</a>
+                    <a href="../../Josua/Pengaturan%20Hardware/index.html">Pengaturan Hardware</a>
+                    <a href="../../marchel/kelola%20akun/index.html">Kelola Akun</a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <a href="#" class="dropdown-toggle">
+                    Pembayaran Digital
+                    <span>⌄</span>
+                </a>
+                <div class="dropdown-menu">
+                    <a href="../../marchel/ppob/index.html">PPOB</a>
+                    <a href="../../marchel/ppob%20item/pulsa/index.html">PPOB Pulsa</a>
+                    <a href="../../marchel/ppob%20item/data/index.html">PPOB Data</a>
+                    <a href="../../marchel/ppob%20item/air/index.html">PPOB Air</a>
+                    <a href="../../marchel/ppob%20item/pln/index.html">PPOB PLN</a>
+                    <a href="../../marchel/ppob%20item/ewallet/index.html">PPOB E-Wallet</a>
+                    <a href="../../marchel/ppob%20item/kredit/index.html">PPOB Kredit</a>
+                </div>
+            </div>
+
+            <a href="#" id="logout">Log Out</a>
+
+        </nav>
+    </aside>
+
+    <main>
+        <header>
+            <h2>Selamat Datang</h2>
+            <span id="tanggal">Tanggal</span>
+            <span id="statusShift">Shift Aktif</span>
+        </header>
+
+        <div class="ringkasan">
+            <section>
+                <h3>Total Penjualan</h3>
+                <span id="totalSale">Rp0</span>
+            </section>
+            <section>
+                <h3>Jumlah Transaksi</h3>
+                <span id="totalTransaksi">0</span>
+            </section>
+            <section>
+                <h3>Produk Terjual</h3>
+                <span id="produkTerjual">0</span>
+            </section>
+        </div>
+
+
+        <section>
+            <h3>Transaksi Terbaru</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>No. Transaksi</th>
+                        <th>Waktu</th>
+                        <th>Total</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>TRX001</td>
+                        <td>09:30</td>
+                        <td>Rp50.000</td>
+                        <td>Selesai</td>
+                    </tr>
+                    <tr>
+                        <td>TRX002</td>
+                        <td>10:15</td>
+                        <td>Rp75.000</td>
+                        <td>Selesai</td>
+                    </tr>
+                    <tr>
+                        <td>TRX003</td>
+                        <td>10:45</td>
+                        <td>Rp25.000</td>
+                        <td>Selesai</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+</main>
+<script src="dashboard.js"></script>
+</body>
+</html>

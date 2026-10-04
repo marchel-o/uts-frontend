@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pembayaran</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="top">
+        <strong>Kasir Minimart</strong>
+        <nav>
+            <a href="cari-barang.html">Cari barang</a> 
+            <a class="on" href="pembayaran.html">Pembayaran</a> 
+        </nav>
+    </header>
+    <main class="main">
+        <section>
+            <h1>Pembayaran</h1>
+            <div class="total" style="margin-top:12px"><span>Total belanja</span><b id="total"></b></div>
+            <fieldset class="methods">
+                <label><input type="radio" name="m" value="tunai" checked>Tunai</label>
+                <label><input type="radio" name="m" value="qris">QRIS</label>
+                <label><input type="radio" name="m" value="kartu">Kartu debit/kredit</label>
+            </fieldset>
+            <p id="err" class="err" role="alert"></p>
+            <button id="proses" class="btn pri block">Proses pembayaran</button>
+        </section>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

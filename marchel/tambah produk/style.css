@@ -1,22 +1,46 @@
-body{
-  padding: 1em;
-}
-
 #tambah-produk-form{
   display: flex;
   flex-direction: column;
   gap: .6em;
-  background-color: var(--primary);
   padding: 1em;
   border-radius: .7em;
   margin-top: 1em;
+  background-color: var(--surface);
+  box-shadow: 2px 5px 15px 0px rgba(0, 0, 0, 0.20);
 }
 
-#tambah-produk-form div{
+#tambah-produk-form > div{
   display: flex;
   flex-direction: column;
   gap: .4em;
   font-size: .9em;
+  font-weight: 600;
+}
+
+#produk-kategori{
+  font-size: .9em;
+}
+
+.produk-items{
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+  gap: .6em !important;
+}
+
+.produk-items > div{
+  display: flex;
+  flex-direction: column;
+  gap: .4em;
+}
+
+input[type="file"]::file-selector-button {
+  border: 1px solid var(--border);
+  background-color: var(--surface);
+  border-radius: .4em;
+  cursor: pointer;
+  margin-right: .8em;
+  font-size: .9em;
+  transition: .15s;
 }
 
 #tambah-produk-form textarea{
@@ -31,6 +55,7 @@ body{
   -moz-appearance: none; 
   -webkit-appearance: none; 
   appearance: none;
+  cursor: pointer;
 }
 
 #tambah-produk-form textarea, input, select{
@@ -39,6 +64,7 @@ body{
   border: 2px solid var(--border);
   border-radius: .5em;
   background-color: var(--surface);
+  font-size: .9em;
 }
 
 #tambah-produk-form button{
@@ -46,8 +72,39 @@ body{
   padding: .5em;
   border-radius: .7em;
   color: var(--surface);
-  background-color: var(--info);
+  background-color: var(--primary);
   border: none;
   outline: none;
+  font-size: .9em;
+  transition: 150ms all;
+  cursor: pointer;
 }
 
+#tambah-produk-form button:hover{
+  background-color: var(--primary-hover);
+}
+
+#modal-popup {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  width: max-content;
+  transform: translate(-50%, -120%);
+  display: flex;
+  align-items: center;
+  gap: .6em;
+  background: #22c55e;
+  color: #fff;
+  padding: .9em 1.5em;
+  border-radius: .5em;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, .15);
+  font-weight: 600;
+  font-size: .95rem;
+  z-index: 9999;
+  transition: transform .35s ease-out;
+  cursor: pointer;
+}
+
+#modal-popup.show {
+  transform: translate(-50%, 40%);
+}

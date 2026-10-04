@@ -1,0 +1,20 @@
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;font:15px/1.5 system-ui,"Segoe UI",Arial,sans-serif}
+.app{display:grid;grid-template-columns:220px 1fr;min-height:100vh;background:linear-gradient(135deg, lavender 30%, rgb(241, 250, 225) 80%)}
+.nav{background:rgba(35,49,48,.85);color:#fff;padding:20px 12px}
+.nav h1{font-size:18px;margin:0 8px 18px}
+.nav a{display:block;color:#fff;text-decoration:none;padding:11px 12px;border-radius:8px}
+.nav a:hover{background:rgba(255,255,255,.14)}
+.nav a.active{background:rgba(255,255,255,.22);font-weight:700}
+.main{padding:28px;max-width:760px}
+.main h2{margin:0 0 4px;font-size:24px}
+.sub{color:#555;margin:0 0 20px}
+.card{background:rgba(255,255,255,.55);backdrop-filter:blur(15px);-webkit-backdrop-filter:blur(15px);border:1px solid rgba(255,255,255,.4);box-shadow:0 6px 15px rgba(0,0,0,.35);border-radius:12px;padding:18px}
+.dev{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid rgba(0,0,0,.1)}
+.dev:last-child{border:0}
+.dev b{display:block}
+.dev .status{font-size:13px;color:#555;margin-top:2px}
+.dev .status.ok{color:green}
+.dev .status.bad{color:#b3261e}
+.btn-ghost{background:none;border:1px solid rgba(35,49,48,.6);color:#233130;border-radius:8px;padding:8px 14px;font:inherit;font-weight:600;cursor:pointer}
+.btn-ghost:disabled{opacity:.6;cursor:wait}

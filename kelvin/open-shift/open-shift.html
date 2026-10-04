@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Shift</title>
+    <link rel="stylesheet" href="shift.css">
+</head>
+<body>
+    <div class="container">
+        <div class="leftPanel">
+            <h1>Buka Shift</h1>
+            <strong>Isi detail berikut ini sebelum memulai shift.</strong>
+            <div class="shift-info">
+                <div class="infoKasir">
+                    <p>Nama Pegawai</p>
+                    <span id="namaKasir">Admin</span>
+                </div>
+
+                <div class="infoTanggal">
+                    <p>Tanggal</p>
+                    <span id="currentDate"></span>
+                </div>
+            </div>
+        </div>
+            
+        <div class="rightPanel">
+            <h2>Modal Awal Kasir</h2>
+            <div id="amountDisp">Rp.0</div>
+            <div class="numpad">
+                <input type="button" value="1">
+                <input type="button" value="2">
+                <input type="button" value="3">
+                <input type="button" value="4">
+                <input type="button" value="5">
+                <input type="button" value="6">
+                <input type="button" value="7">
+                <input type="button" value="8">
+                <input type="button" value="9">
+                <input type="button" value="⌫">
+                <input type="button" value="0">
+                <input type="button" value="C">
+            </div>
+            <button id="openShiftBtn">Buka Shift</button>
+        </div>
+    </div>
+<script src="shift.js"></script>
+</body>
+</html>

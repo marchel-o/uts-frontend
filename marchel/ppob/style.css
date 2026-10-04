@@ -1,0 +1,56 @@
+.ppob-kategori{
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  font-weight: 550;
+  font-size: .9em;
+  padding: 1em;
+  margin: 1em 0;
+  background-color: var(--surface);
+  border-radius: 1em;
+  box-shadow: 2px 2px 8px -1px rgba(0, 0, 0, 0.17);
+}
+
+.ppob-kategori > p{
+  font-weight: 700;
+}
+
+.list-kategori{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  border-radius: 1em;
+  margin: 0 1em;
+}
+
+.item-kategori a{
+  width: 2.5em;
+  height: 2.5em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid var(--primary);
+  margin-bottom: .3em;
+  border-radius: 50%;
+  transition: 150ms all;
+  color: var(--text-primary);
+  text-decoration: none;
+}
+
+.item-kategori:hover a{
+  background-color: var(--primary-hover);
+  color: var(--surface);
+}
+
+.item-kategori{
+  text-align: center;
+  width: 5em;
+  cursor: pointer;
+}
+
+.item-kategori p {
+  margin: 0;
+  font-size: .85em;
+  line-height: 1.2;
+  word-wrap: break-word;
+}
