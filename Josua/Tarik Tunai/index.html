@@ -1,84 +1,57 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Tarik Tunai (Drop Cash)</title>
+  <link rel="stylesheet" href="../../global.css">
+  <link rel="stylesheet" href="/components/sidebar.css">
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-  <div class="app">
-    <nav class="nav">
-      <h1>Kasir Shift</h1>
+  <div id="sidebar-container"></div>
+  <button id="menuToggle" class="menu-toggle" aria-expanded="false">☰ Menu</button>
 
-      <a href="index.html" class="active">Tarik Tunai</a>
-      <a href="../Tutup Shift/index.html">Tutup Shift</a>
-      <a href="../Laporan Penjulan/index.html">Laporan Penjualan</a>
-      <a href="../Pengaturan Hardware/index.html">Pengaturan Hardware</a>
-    </nav>
+  <div id="bg-elem"></div>
+  <div id="overlay"></div>
 
-    <main class="main">
-      <h2>Tarik Tunai (Drop Cash)</h2>
+  <main>
+    <h2>Tarik Tunai (Drop Cash)</h2>
+    <p class="sub">Catat setoran uang pecahan besar ke brankas atau supervisor di tengah shift.</p>
 
-      <p class="sub">
-        Catat setoran uang pecahan besar ke brankas atau supervisor di tengah shift.
-      </p>
-
-      <div class="card">
-        <div class="grid">
-          <div>
-            <label for="amt">Jumlah setoran (Rp)</label>
-            <input id="amt" type="number" min="0" step="1000">
-          </div>
-
-          <div>
-            <label for="to">Diserahkan ke</label>
-            <select id="to">
-              <option>Brankas</option>
-              <option>Supervisor</option>
-            </select>
-          </div>
-
-          <div>
-            <label for="note">Catatan</label>
-            <input id="note" placeholder="mis. laci penuh">
-          </div>
+    <div class="card">
+      <div class="grid">
+        <div>
+          <label for="amt">Jumlah setoran (Rp)</label>
+          <input id="amt" type="number" min="0" step="1000" placeholder="mis. 500000">
         </div>
-
-        <p>
-          <button type="button" class="btn" id="saveBtn">
-            Simpan setoran
-          </button>
-        </p>
-
-        <div id="msg" class="msg" hidden></div>
-      </div>
-
-      <div class="card">
-        <div class="scroll">
-          <table>
-            <thead>
-              <tr>
-                <th>Jam</th>
-                <th>Tujuan</th>
-                <th>Catatan</th>
-                <th class="r">Jumlah</th>
-                <th class="r">Aksi</th>
-              </tr>
-            </thead>
-
-            <tbody id="rows"></tbody>
-          </table>
+        <div>
+          <label for="to">Diserahkan ke</label>
+          <select id="to"><option>Brankas</option><option>Supervisor</option></select>
         </div>
-
-        <div class="total">
-          Total setoran: <span id="totalAmt">Rp 0</span>
+        <div>
+          <label for="note">Catatan</label>
+          <input id="note" placeholder="mis. laci penuh">
         </div>
       </div>
-    </main>
-  </div>
+      <p><button type="button" class="btn" id="saveBtn">Simpan setoran</button></p>
+      <div id="msg" class="msg" hidden></div>
+    </div>
+
+    <div class="card">
+      <div class="scroll">
+        <table>
+          <thead>
+            <tr><th>Jam</th><th>Tujuan</th><th>Catatan</th><th class="r">Jumlah</th><th class="r">Aksi</th></tr>
+          </thead>
+          <tbody id="rows"></tbody>
+        </table>
+      </div>
+      <div class="total">Total setoran: <span id="totalAmt">Rp 0</span></div>
+    </div>
+  </main>
 
   <script src="script.js"></script>
+  <script src="/components/sidebar.js"></script>
 </body>
 </html>

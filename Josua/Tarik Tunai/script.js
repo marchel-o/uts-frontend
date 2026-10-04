@@ -57,4 +57,4 @@ rows.addEventListener('click', (e) => {
   render();
 });
 
-render();
+render();0
