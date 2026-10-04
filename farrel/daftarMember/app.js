@@ -26,7 +26,12 @@ document.getElementById("member-form").addEventListener("submit", function (e) {
     alert("No. HP ini sudah terdaftar sebagai member.");
     return;
   }
-  list.push({ name, phone, dob, points: 0 });
+  const joinDate = new Date().toLocaleDateString("id-ID", {
+    day: "2-digit",
+    month: "2-digit",
+    year: "numeric",
+  });
+  list.push({ name, phone, dob, points: 0, joinDate, status: "aktif" });
   saveMembers(list);
   res.style.display = "block";
   res.innerHTML = `<h4>Konfirmasi</h4><p>Member <b>${name}</b> berhasil didaftarkan dengan No. HP ${phone}.</p>`;
