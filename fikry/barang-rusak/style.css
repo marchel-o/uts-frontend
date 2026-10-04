@@ -1,0 +1,298 @@
+body {
+    padding: 1em;
+}
+
+#head-title {
+    display: flex;
+    align-items: center;
+    gap: 0.75em;
+    margin-bottom: 0.9em;
+}
+
+#head-title h1 {
+    min-width: 0;
+    font-size: clamp(1.15rem, 4vw, 1.5rem);
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+#head-title nav a {
+    display: inline-flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    color: var(--text-light);
+    background-color: var(--primary);
+    border: none;
+    border-radius: 0.65em;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#head-title nav a:is(:hover, :focus-visible) {
+    background-color: var(--primary-hover);
+    outline: none;
+}
+
+#head-title nav a svg {
+    display: block;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 0.9em;
+}
+
+main form {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.75em 1em;
+    padding: 1em;
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 0.75em;
+    box-shadow: 2px 5px 15px 0 rgb(0 0 0 / 0.12);
+}
+
+main form label {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35em;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+main form label:nth-child(n + 3) {
+    grid-column: 1 / -1;
+}
+
+main form :is(input, textarea) {
+    width: 100%;
+    padding: 0.7em 0.9em;
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--text-primary);
+    background-color: var(--surface-elevated);
+    border: 2px solid var(--border);
+    border-radius: 0.7em;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+main form input {
+    min-height: 2.9rem;
+}
+
+main form textarea {
+    line-height: 1.5;
+    resize: vertical;
+}
+
+main form :is(input, textarea):focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--primary) 18%, transparent);
+}
+
+main form :is(input, textarea)::placeholder {
+    color: var(--text-secondary);
+    opacity: 0.7;
+}
+
+main form button {
+    grid-column: 1 / -1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 2.9rem;
+    padding: 0.7em 1em;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-light);
+    background-color: var(--primary);
+    border: none;
+    border-radius: 0.65em;
+    cursor: pointer;
+    transition: background-color 0.2s, opacity 0.2s;
+}
+
+main form button:enabled:is(:hover, :focus-visible) {
+    background-color: var(--primary-hover);
+    outline: none;
+}
+
+table,
+tbody {
+    display: grid;
+    gap: 0.6em;
+}
+
+table:has(tbody:empty) thead {
+    display: none;
+}
+
+caption {
+    font-size: 1rem;
+    font-weight: 700;
+    text-align: left;
+}
+
+thead {
+    display: none;
+}
+
+tr {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.4em 1em;
+}
+
+tbody tr {
+    --status: var(--success);
+    padding: 0.85em 1em;
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--status);
+    border-radius: 0.65em;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 0.06);
+    transition: translate 0.2s, box-shadow 0.2s;
+}
+
+tbody tr[data-status="menunggu"] {
+    --status: var(--warning);
+}
+
+td {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1em;
+    font-size: 0.95rem;
+    overflow-wrap: anywhere;
+}
+
+td:is(:nth-child(1), :nth-child(4), :nth-child(5))::before {
+    content: attr(data-label);
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+}
+
+td:nth-child(1) {
+    grid-area: 3 / 2;
+    align-items: flex-end;
+    color: var(--text-secondary);
+}
+
+td:nth-child(2) {
+    font-weight: 700;
+}
+
+td:nth-child(3) {
+    grid-column: 1 / -1;
+    font-size: 1.05rem;
+    font-weight: 600;
+}
+
+td:nth-child(5) {
+    grid-column: 1 / -1;
+}
+
+td:last-child {
+    grid-area: 1 / 2;
+    flex-direction: row;
+    align-items: center;
+    justify-self: end;
+    gap: 0.4em;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: capitalize;
+    color: var(--status);
+}
+
+td:last-child::before {
+    content: "";
+    width: 0.5em;
+    height: 0.5em;
+    border-radius: 50%;
+    background-color: var(--status);
+}
+
+main p {
+    padding: 1.4em 0.5em;
+    text-align: center;
+    color: var(--text-secondary);
+}
+
+@media (hover: hover) {
+    tbody tr:hover {
+        translate: 0 -2px;
+        box-shadow: 0 6px 14px rgb(0 0 0 / 0.1);
+    }
+}
+
+@media screen and (min-width: 780px) {
+    main form {
+        grid-template-columns: 8rem 6rem 1fr;
+    }
+
+    main form label:nth-child(3) {
+        grid-column: auto;
+    }
+
+    main form button {
+        justify-self: end;
+        min-width: 12rem;
+    }
+
+    thead {
+        display: block;
+    }
+
+    thead tr,
+    tbody tr {
+        grid-template-columns: 3.8rem 5.2rem minmax(0, 1.1fr) 3.5rem minmax(0, 1.4fr) 5.5rem;
+        gap: 0.8em;
+        align-items: center;
+    }
+
+    thead tr {
+        padding-inline: calc(1em + 4px) calc(1em + 1px);
+    }
+
+    th {
+        text-align: left;
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: var(--text-secondary);
+    }
+
+    tbody tr {
+        padding-block: 0.7em;
+    }
+
+    td:nth-child(1) {
+        grid-area: auto;
+        align-items: initial;
+    }
+
+    td:nth-child(3) {
+        font-size: 0.95rem;
+    }
+
+    td:last-child {
+        grid-area: auto;
+        justify-self: start;
+    }
+
+    td:is(:nth-child(1), :nth-child(4), :nth-child(5))::before {
+        content: none;
+    }
+}

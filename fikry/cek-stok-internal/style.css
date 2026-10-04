@@ -1,0 +1,227 @@
+body {
+  padding: 1em;
+}
+
+#head-title {
+  display: flex;
+  align-items: center;
+  gap: 0.75em;
+  margin-bottom: 0.9em;
+}
+
+#head-title h1 {
+  min-width: 0;
+  font-size: clamp(1.15rem, 4vw, 1.5rem);
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+#head-title nav a {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  color: var(--text-light);
+  background-color: var(--primary);
+  border: none;
+  border-radius: 0.65em;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+#head-title nav a:is(:hover, :focus-visible) {
+  background-color: var(--primary-hover);
+  outline: none;
+}
+
+#head-title nav a svg {
+  display: block;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6em;
+}
+
+main search {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  display: block;
+  padding-block: 0.5em;
+  background-color: var(--bg);
+}
+
+main search svg {
+  position: absolute;
+  top: 50%;
+  left: 1em;
+  translate: 0 -50%;
+  color: var(--text-secondary);
+  pointer-events: none;
+  transition: color 0.2s;
+}
+
+main search:focus-within svg {
+  color: var(--primary);
+}
+
+main search input {
+  width: 100%;
+  padding: 0.8em 1em 0.8em 2.9em;
+  font-size: 1rem;
+  color: var(--text-primary);
+  background-color: var(--surface);
+  border: 2px solid var(--border);
+  border-radius: 0.7em;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+main search input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--primary) 18%, transparent);
+}
+
+table,
+tbody {
+  display: grid;
+  gap: 0.6em;
+}
+
+thead {
+  display: none;
+}
+
+tr {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.4em 1em;
+}
+
+tbody tr {
+  --status: var(--success);
+  padding: 0.85em 1em;
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--status);
+  border-radius: 0.65em;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 0.06);
+  transition: translate 0.2s, box-shadow 0.2s;
+}
+
+tbody tr[data-status="menipis"] {
+  --status: var(--warning);
+}
+
+td {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1em;
+  font-size: 0.95rem;
+}
+
+td:first-child {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+td:nth-child(2) {
+  grid-column: 1 / -1;
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+td:is(:nth-child(3), :nth-child(4)) {
+  font-weight: 600;
+}
+
+td:is(:nth-child(3), :nth-child(4))::before {
+  content: attr(data-label);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+}
+
+td:last-child {
+  grid-area: 1 / 2;
+  flex-direction: row;
+  align-items: center;
+  justify-self: end;
+  gap: 0.4em;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: capitalize;
+  color: var(--status);
+}
+
+td:last-child::before {
+  content: "";
+  width: 0.5em;
+  height: 0.5em;
+  border-radius: 50%;
+  background-color: var(--status);
+}
+
+main p {
+  padding: 1.4em 0.5em;
+  text-align: center;
+  color: var(--text-secondary);
+}
+
+@media (hover: hover) {
+  tbody tr:hover {
+    translate: 0 -2px;
+    box-shadow: 0 6px 14px rgb(0 0 0 / 0.1);
+  }
+}
+
+@media screen and (min-width: 780px) {
+  thead {
+    display: block;
+  }
+
+  thead tr,
+  tbody tr {
+    grid-template-columns: 5.5rem 1fr 4.5rem 5.5rem 6rem;
+    align-items: center;
+  }
+
+  thead tr {
+    padding-inline: calc(1em + 4px) calc(1em + 1px);
+  }
+
+  th {
+    text-align: left;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+  }
+
+  tbody tr {
+    padding-block: 0.7em;
+  }
+
+  td:nth-child(2) {
+    grid-column: auto;
+    font-size: 0.95rem;
+  }
+
+  td:is(:nth-child(3), :nth-child(4))::before {
+    content: none;
+  }
+
+  td:last-child {
+    grid-area: auto;
+    justify-self: start;
+  }
+}
