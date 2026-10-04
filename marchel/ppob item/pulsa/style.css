@@ -26,6 +26,92 @@ input{
   background-color: var(--surface);
   font-size: .9em;
   padding: .6em;
-  border: 2px solid var(--border);
+  border: .2em solid var(--border);
   border-radius: .7em;
+  cursor: pointer;
+  transition: all 150ms;
+}
+.pulsa-item.picked{
+  background-color: rgba(136, 173, 222, 0.4);
+}
+
+.pulsa-item:hover{
+  background: rgba(75, 149, 245, 0.4);
+}
+
+#continue-container{
+  padding: 1em;
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  flex-direction: column;
+  background-color: var(--surface);
+}
+#continue-container.show{
+  display: flex;
+}
+
+#continue-container > div{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: .6em;
+}
+#continue-container > div > p:first-of-type{
+  color: var(--text-secondary);
+  font-weight: 700;
+}
+#continue-container > div > p ~ p{
+  font-size: 1.2em;
+  font-weight: 700;
+}
+
+body{
+  padding-bottom: 8em !important;
+}
+
+#continue-container > button{
+  padding: .5em;
+  border-radius: .7em;
+  color: var(--surface);
+  background-color: var(--primary);
+  border: none;
+  outline: none;
+  font-size: .9em;
+  font-weight: 600;
+  transition: 150ms all;
+  cursor: pointer;
+}
+
+#continue-container > button:hover{
+  background-color: var(--primary-hover);
+}
+
+@media screen and (min-width: 550px) {
+  body{
+    padding-bottom: 0 !important;
+  }
+
+  #continue-container{
+    flex-direction: row;
+    position: relative;
+    margin-top: 1em;
+    justify-content: flex-end;
+    background-color: var(--bg);
+    gap: .5em;
+    padding: 0;
+  }
+
+  #continue-container > div{
+    flex-direction: column;
+    align-items: flex-end;
+    font-size: 1em;
+    font-weight: 600;
+    margin: 0;
+  }
+
+  #continue-container > button{
+    padding: 0 4em;
+  }
 }

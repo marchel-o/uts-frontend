@@ -76,7 +76,7 @@
 
 #ewallet-result{
   display: none;
-  position: absolute;
+  position: fixed;
   width: 90%;
   top: 50%;
   left: 50%;

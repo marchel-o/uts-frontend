@@ -29,8 +29,6 @@
     height: 100vh;
 }
 
-
-
 #sidebar::-webkit-scrollbar {
     width: 6px;
 }
@@ -107,7 +105,7 @@
 
 .menu-toggle {
     display: none;
-    background-color: rgb(109, 2, 2);
+    background-color: var(--primary);
     color: white;
     border: none;
     border-radius: 5px;
@@ -116,14 +114,14 @@
 }
 
 .menu-toggle:hover {
-    background-color: rgb(160, 25, 25);
+    background-color: var(--primary-hover);
 }
 
 @media (max-width: 768px) {
     .menu-toggle {
         display: block;
         width: fit-content;
-        margin: 10px;
+        margin: .7em 0;
         padding: 12px 18px;
     }
 
@@ -157,4 +155,169 @@
     #sidebar nav h3 {
         width: 100%;
     }
+}
+
+@media screen and (min-width: 769px){
+  body{
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    min-height: 100vh;
+  }
+
+  #sidebar-container{
+    flex: 0 0 15vw;
+    width: 15vw;
+    min-width: 200px;
+    height: 100vh;
+  }
+
+  main {
+    width: 100%;
+    max-width: 50em;
+    padding: 2em;
+  }
+}
+
+@media screen and (max-width: 768px){
+  body{
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    margin: 0;
+    padding: 1em;
+    overflow-x: hidden;
+  }
+
+  #sidebar-container{
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    height: auto;
+    overflow: hidden;
+  }
+
+  #sidebar-container #sidebar{
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    height: auto;
+    position: relative;
+    overflow-x: hidden;
+  }
+
+  #sidebar-container #sidebar{
+    display: none;
+  }
+
+  #sidebar-container #sidebar.active{
+    display: block;
+  }
+
+  #sidebar nav{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    padding: 10px;
+    gap: 5px;
+    overflow-x: hidden;
+  }
+
+  #sidebar nav a{
+    display: block;
+
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    padding: 12px 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  #sidebar nav #logout{
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  #sidebar .dropdown{
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    overflow: hidden;
+  }
+
+  #sidebar .dropdown-toggle{
+    display: flex;
+
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #sidebar .dropdown-toggle span{
+    flex-shrink: 0;
+  }
+
+  #sidebar .dropdown-menu{
+    display: none;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    padding-left: 10px;
+    margin-top: 5px;
+    overflow-x: hidden;
+  }
+
+  #sidebar .dropdown-menu.active{
+    display: flex;
+  }
+
+  #sidebar .dropdown-menu a{
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    padding: 10px 12px;
+    white-space: normal;
+    overflow-wrap: break-word;
+  }
+
+  main{
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    padding: 1em 0;
+    overflow-x: hidden;
+  }
+
+  /* #list-akun{
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .card-akun{
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  } */
+}
+
+html,
+body{
+  overflow-x: hidden;
 }
