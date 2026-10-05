@@ -225,3 +225,24 @@ main p {
     justify-self: start;
   }
 }
+
+#main-content {
+  flex: 1;
+  min-width: 0;
+}
+
+@media screen and (min-width: 769px) {
+  body #sidebar-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+
+  #main-content {
+    margin-left: max(15vw, 200px);
+  }
+
+  #head-title {
+    padding: 1em 2em 0;
+  }
+}
