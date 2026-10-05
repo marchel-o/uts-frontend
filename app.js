@@ -1,1 +1,1 @@
-window.location.replace("https://marchel-o.github.io/uts-frontend/kelvin/dashboard/dashboard.html");
+window.location.replace("https://marchel-o.github.io/uts-frontend/kelvin/login");
