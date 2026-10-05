@@ -214,3 +214,17 @@ if (menuToggle && sidebar) {
     });
 }
 
+
+const logout = document.getElementById("logout");
+logout.addEventListener("click", function(e) {
+    e.preventDefault();
+
+    let yakin = confirm("Yakin ingin logout?");
+
+    if (yakin) {
+        sessionStorage.removeItem("shiftAktif");
+        sessionStorage.removeItem("modalAwal");
+
+        window.location.href = "../login/index.html";
+    }
+});
